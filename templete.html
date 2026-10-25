@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Shubh Vivah | Hem & Aarohi's Wedding Invitation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Royal Indian Heritage Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: {
+                            50: '#FFFDF9',
+                            100: '#FDF6EC',
+                            200: '#FFF8E7',
+                            300: '#F5E6CC',
+                        },
+                        blush: {
+                            50: '#FCF5F4',
+                            100: '#F9EBEA',
+                            200: '#F2D7D5',
+                        },
+                        crimson: {
+                            950: '#2C1810',
+                            900: '#4A151B',
+                            800: '#781222',
+                            700: '#9B1B30',
+                            600: '#B81D13',
+                            500: '#D93829',
+                        },
+                        gold: {
+                            100: '#FFF9E6',
+                            200: '#FDF0B8',
+                            300: '#F3D678',
+                            400: '#D4AF37',
+                            500: '#C59B27',
+                            600: '#9E7816',
+                            700: '#78580A',
+                        },
+                        marigold: {
+                            400: '#F39C12',
+                            500: '#E67E22',
+                            600: '#D35400',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['"Cinzel Decorative"', 'serif'],
+                        cormorant: ['"Cormorant Garamond"', 'serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        hindi: ['"Tiro Devanagari Hindi"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-primary: #FFFDF9;
+            --bg-secondary: #FDF6EC;
+            --bg-blush: #F9EBEA;
+            --bg-card: rgba(255, 253, 249, 0.94);
+            --text-dark: #4A151B;
+            --text-charcoal: #2C1810;
+            --accent-crimson: #9B1B30;
+            --accent-vermilion: #B81D13;
+            --accent-gold: #C59B27;
+            --accent-marigold: #E67E22;
+            --gold-gradient: linear-gradient(135deg, #B38728 0%, #F7E594 30%, #C59B27 55%, #FBF0B9 80%, #9E7816 100%);
+            --crimson-gradient: linear-gradient(135deg, #9B1B30 0%, #B81D13 50%, #781222 100%);
+        }
+
+        /* Light Theme Variation 1: Ivory & Sindoor Crimson (Default) */
+        body[data-theme="ivory-crimson"] {
+            background-color: #FFFDF9;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.16) 0%, transparent 55%),
+                radial-gradient(circle at 12% 35%, rgba(249, 235, 234, 0.85) 0%, transparent 50%),
+                radial-gradient(circle at 88% 75%, rgba(253, 246, 236, 0.9) 0%, transparent 55%),
+                linear-gradient(180deg, #FFFDF9 0%, #FDF6EC 45%, #F9EBEA 75%, #FFF8E7 100%);
+            color: #4A151B;
+        }
+
+        /* Light Theme Variation 2: Pastel Peach & Royal Gold */
+        body[data-theme="peach-gold"] {
+            background-color: #FFF9F5;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(230, 126, 34, 0.14) 0%, transparent 55%),
+                radial-gradient(circle at 15% 40%, rgba(255, 228, 214, 0.75) 0%, transparent 50%),
+                radial-gradient(circle at 85% 80%, rgba(255, 245, 225, 0.9) 0%, transparent 55%),
+                linear-gradient(180deg, #FFFDF9 0%, #FFF2E6 50%, #FDEBD0 80%, #FFF8E7 100%);
+            color: #4A151B;
+        }
+
+        /* Light Theme Variation 3: Royal Cream & Marigold */
+        body[data-theme="cream-marigold"] {
+            background-color: #FFFDF7;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.22) 0%, transparent 60%),
+                radial-gradient(circle at 15% 50%, rgba(254, 249, 231, 0.95) 0%, transparent 55%),
+                linear-gradient(180deg, #FFFDF9 0%, #FFF8E7 50%, #FDF2D0 80%, #FFFDF9 100%);
+            color: #2C1810;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            transition: background 0.5s ease;
+        }
+
+        /* Auspicious Crimson & Royal Gold Shimmer Typography */
+        .crimson-gold-text {
+            background: linear-gradient(90deg, #9B1B30 0%, #B81D13 25%, #B38728 50%, #9B1B30 75%, #781222 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShimmer 6s linear infinite;
+        }
+
+        .antique-gold-text {
+            background: linear-gradient(90deg, #8A640F 0%, #C59B27 30%, #9B1B30 55%, #C59B27 80%, #8A640F 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: textShimmer 5s linear infinite;
+        }
+
+        @keyframes textShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Royal Buttons & Badges */
+        .crimson-btn {
+            background: var(--crimson-gradient);
+            color: #FFFDF9;
+            border: 1.5px solid #D4AF37;
+            box-shadow: 0 10px 25px rgba(155, 27, 48, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        }
+        .crimson-btn:hover {
+            box-shadow: 0 14px 30px rgba(155, 27, 48, 0.38), 0 0 15px rgba(212, 175, 55, 0.45);
+        }
+
+        .gold-btn {
+            background: var(--gold-gradient);
+            color: #2C1810;
+            border: 1px solid #9E7816;
+            box-shadow: 0 8px 22px rgba(197, 155, 39, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        /* Light Ivory Cards with Glowing Golden Borders */
+        .ivory-card {
+            background: rgba(255, 253, 249, 0.92);
+            border: 1.5px solid rgba(212, 175, 55, 0.55);
+            box-shadow: 0 12px 35px rgba(155, 27, 48, 0.07), 0 4px 15px rgba(197, 155, 39, 0.1), inset 0 0 25px rgba(253, 246, 236, 0.8);
+        }
+
+        .ivory-card-bright {
+            background: linear-gradient(180deg, #FFFDF9 0%, #FDF6EC 100%);
+            border: 2px solid #C59B27;
+            box-shadow: 0 18px 45px rgba(155, 27, 48, 0.11), 0 0 25px rgba(212, 175, 55, 0.22), inset 0 0 0 4px rgba(212, 175, 55, 0.12);
+        }
+
+        /* Traditional Rajasthani Jharokha Arch Shape (Light Ivory & Gold) */
+        .jharokha-frame {
+            border-radius: 50% 50% 20px 20px / 36% 36% 20px 20px;
+            position: relative;
+            background: linear-gradient(180deg, #FFFDF9 0%, #FDF6EC 65%, #F9EBEA 100%);
+            border: 2px solid #C59B27;
+            box-shadow: 0 18px 45px rgba(74, 21, 27, 0.1), 0 0 0 5px rgba(212, 175, 55, 0.14);
+        }
+
+        .jharokha-event-card {
+            border-radius: 42% 42% 18px 18px / 22% 22% 18px 18px;
+            position: relative;
+            background: linear-gradient(180deg, #FFFDF9 0%, #FDF6EC 100%);
+            border: 1.5px solid rgba(197, 155, 39, 0.65);
+            box-shadow: 0 14px 34px rgba(74, 21, 27, 0.08), inset 0 0 18px rgba(212, 175, 55, 0.08);
+        }
+
+        .jharokha-inner-arch {
+            border-radius: 50% 50% 14px 14px / 42% 42% 14px 14px;
+        }
+
+        /* Swaying Marigold Toran Animation */
+        @keyframes toranSway {
+            0%, 100% { transform: rotate(-1.1deg) translateY(0px); }
+            50% { transform: rotate(1.1deg) translateY(2px); }
+        }
+        .toran-sway {
+            transform-origin: top center;
+            animation: toranSway 4.5s ease-in-out infinite;
+        }
+
+        /* Rotating Sacred Mandala Watermarks */
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes spinReverseSlow {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+        .spin-mandala {
+            animation: spinSlow 55s linear infinite;
+        }
+        .spin-mandala-reverse {
+            animation: spinReverseSlow 70s linear infinite;
+        }
+
+        /* Floating Lotus & Diya Flame Flicker */
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-9px); }
+        }
+        .float-slow {
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        @keyframes diyaFlicker {
+            0%, 100% { transform: scale(1) rotate(-2deg); opacity: 0.95; filter: drop-shadow(0 0 8px #F39C12); }
+            25% { transform: scale(1.08, 0.96) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 14px #E67E22); }
+            50% { transform: scale(0.95, 1.06) rotate(-1deg); opacity: 0.9; filter: drop-shadow(0 0 10px #D35400); }
+            75% { transform: scale(1.04, 1.02) rotate(3deg); opacity: 1; filter: drop-shadow(0 0 16px #F1C40F); }
+        }
+        .diya-flame {
+            transform-origin: bottom center;
+            animation: diyaFlicker 1.8s infinite ease-in-out;
+        }
+
+        /* Light Ivory & Gold Carved Royal Dwar (Palace Double Doors) Overlay */
+        #royalGateOverlay {
+            perspective: 1800px;
+            transition: opacity 0.85s ease 1.1s, visibility 0.85s ease 1.1s;
+        }
+        #royalGateOverlay.gate-opened {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .gate-door-left {
+            transform-origin: left center;
+            transition: transform 1.5s cubic-bezier(0.7, 0, 0.2, 1);
+            background: 
+                radial-gradient(circle at 88% 50%, rgba(212, 175, 55, 0.22), transparent 60%),
+                repeating-linear-gradient(45deg, rgba(197, 155, 39, 0.06) 0px, rgba(197, 155, 39, 0.06) 14px, transparent 14px, transparent 28px),
+                linear-gradient(135deg, #FFFDF9 0%, #FDF6EC 55%, #F5E6CC 100%);
+        }
+        .gate-door-right {
+            transform-origin: right center;
+            transition: transform 1.5s cubic-bezier(0.7, 0, 0.2, 1);
+            background: 
+                radial-gradient(circle at 12% 50%, rgba(212, 175, 55, 0.22), transparent 60%),
+                repeating-linear-gradient(-45deg, rgba(197, 155, 39, 0.06) 0px, rgba(197, 155, 39, 0.06) 14px, transparent 14px, transparent 28px),
+                linear-gradient(225deg, #FFFDF9 0%, #FDF6EC 55%, #F5E6CC 100%);
+        }
+        #royalGateOverlay.gate-opened .gate-door-left {
+            transform: rotateY(-105deg);
+        }
+        #royalGateOverlay.gate-opened .gate-door-right {
+            transform: rotateY(105deg);
+        }
+        #royalGateOverlay.gate-opened .gate-seal-center {
+            transform: scale(1.32);
+            opacity: 0;
+            transition: all 0.65s ease;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(34px);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-item.reveal-left {
+            transform: translateX(-42px);
+        }
+        .reveal-item.reveal-right {
+            transform: translateX(42px);
+        }
+        .reveal-item.reveal-scale {
+            transform: scale(0.9);
+        }
+        .reveal-item.visible {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+
+        /* Countdown Card Flip & Pulse Animation */
+        @keyframes numberFlipPulse {
+            0% { transform: rotateX(35deg) scale(1.18); color: #B81D13; }
+            100% { transform: rotateX(0deg) scale(1); }
+        }
+        .tick-pulse {
+            animation: numberFlipPulse 0.45s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+
+        /* Soft Sunlight Shimmer Beam Across Cards */
+        .shimmer-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 45%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.75), rgba(212, 175, 55, 0.15), transparent);
+            transform: rotate(25deg);
+            animation: cardBeam 6s infinite;
+            pointer-events: none;
+        }
+        @keyframes cardBeam {
+            0% { left: -60%; }
+            35%, 100% { left: 140%; }
+        }
+
+        /* Fluid Typography for Mobile, Laptop & 4K TV Ratios */
+        .hero-names {
+            font-size: clamp(2.65rem, 6.2vw, 6rem);
+            line-height: 1.12;
+        }
+        .section-heading {
+            font-size: clamp(1.95rem, 4vw, 3.6rem);
+        }
+        .date-display-text {
+            font-size: clamp(1.7rem, 3.8vw, 3.4rem);
+        }
+
+        /* Custom Light & Gold Scrollbar */
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDF6EC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #C59B27, #9B1B30);
+            border-radius: 5px;
+        }
+
+        /* TV Mode 16:9 / 4K Enhancements */
+        body.tv-display-mode .max-w-7xl {
+            max-width: 88vw;
+        }
+    </style>
+</head>
+<body data-theme="ivory-crimson" class="relative selection:bg-crimson-700 selection:text-ivory-50">
+
+    <!-- ===================================================================== -->
+    <!-- 1. CONTINUOUS 2D CANVAS FOR MARIGOLD (GENDA PHOOL) & RED ROSE PETALS  -->
+    <!-- ===================================================================== -->
+    <canvas id="petalCanvas" class="fixed inset-0 pointer-events-none z-30"></canvas>
+
+    <!-- ===================================================================== -->
+    <!-- REUSABLE SACRED JAIN & SWAMINARAYAN SVG DEFS                          -->
+    <!-- ===================================================================== -->
+    <svg class="hidden" aria-hidden="true">
+        
+        <defs>
+            <!-- 1. AUTHENTIC JAIN PRATEEK CHIHNA (Three Lokas, Siddhashila, Swastika, Ahimsa Hand & Dharmachakra) -->
+            <g id="jainSacredEmblem">
+                <!-- Outer Aura Ring -->
+                <circle cx="50" cy="50" r="47" fill="none" stroke="#C59B27" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <!-- Jain Universe (Teen Lok) Outline -->
+                <path d="M35 12 L65 12 L58 34 L72 55 L64 88 L36 88 L28 55 L42 34 Z" fill="rgba(255, 248, 231, 0.85)" stroke="#9B1B30" stroke-width="2" stroke-linejoin="round"/>
+                <!-- Siddhashila Crescent & Siddha Bindu at Top -->
+                <path d="M40 18 Q50 23 60 18" fill="none" stroke="#C59B27" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="50" cy="15" r="2.2" fill="#9B1B30"/>
+                <!-- Four Gati Dots above Swastika -->
+                <circle cx="44" cy="24" r="1.4" fill="#E67E22"/>
+                <circle cx="48" cy="24" r="1.4" fill="#E67E22"/>
+                <circle cx="52" cy="24" r="1.4" fill="#E67E22"/>
+                <circle cx="56" cy="24" r="1.4" fill="#E67E22"/>
+                <!-- Sacred Jain Swastika -->
+                <g stroke="#9B1B30" stroke-width="2" stroke-linecap="round">
+                    <line x1="50" y1="28" x2="50" y2="42"/>
+                    <line x1="43" y1="35" x2="57" y2="35"/>
+                    <line x1="50" y1="28" x2="56" y2="28"/>
+                    <line x1="57" y1="35" x2="57" y2="41"/>
+                    <line x1="50" y1="42" x2="44" y2="42"/>
+                    <line x1="43" y1="35" x2="43" y2="29"/>
+                </g>
+                <!-- Ahimsa Abhaya Mudra Hand & Dharmachakra -->
+                <path d="M41 68 L41 53 C41 50, 43 50, 43 53 L43 49 C43 46, 46 46, 46 49 L46 47 C46 44, 49 44, 49 47 L49 49 C49 46, 52 46, 52 49 L52 54 C54 52, 57 53, 56 57 L54 68 C53 74, 42 74, 41 68 Z" fill="#FFFDF9" stroke="#C59B27" stroke-width="1.8"/>
+                <!-- Dharmachakra Wheel in Palm -->
+                <circle cx="48" cy="61" r="5.5" fill="none" stroke="#9B1B30" stroke-width="1.4"/>
+                <circle cx="48" cy="61" r="1.5" fill="#9B1B30"/>
+                <line x1="48" y1="55.5" x2="48" y2="66.5" stroke="#9B1B30" stroke-width="0.9"/>
+                <line x1="42.5" y1="61" x2="53.5" y2="61" stroke="#9B1B30" stroke-width="0.9"/>
+                <line x1="44" y1="57" x2="52" y2="65" stroke="#9B1B30" stroke-width="0.9"/>
+                <line x1="52" y1="57" x2="44" y2="65" stroke="#9B1B30" stroke-width="0.9"/>
+                <!-- Motto Banner at Base: Parasparopagraho Jivanam -->
+                <path d="M33 82 Q50 85 67 82" fill="none" stroke="#C59B27" stroke-width="1.5"/>
+            </g>
+
+            <!-- 2. AUTHENTIC SWAMINARAYAN TILAK CHANDLO EMBLEM (Golden Urdhva Pundra Tilak & Crimson Kumkum Chandlo) -->
+            <g id="swaminarayanSacredEmblem">
+                <!-- Outer Aura Ring -->
+                <circle cx="50" cy="50" r="47" fill="none" stroke="#C59B27" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <!-- Ornate Lotus Petals Base -->
+                <path d="M50 84 C36 84, 25 75, 22 65 C30 68, 40 72, 50 72 C60 72, 70 68, 78 65 C75 75, 64 84, 50 84 Z" fill="rgba(212, 175, 55, 0.22)" stroke="#C59B27" stroke-width="1.5"/>
+                <path d="M35 83 Q50 91 65 83" fill="none" stroke="#9B1B30" stroke-width="1.8" stroke-linecap="round"/>
+                <!-- Sacred Golden Urdhva Pundra 'U' Tilak -->
+                <path d="M34 16 L34 56 C34 70, 66 70, 66 56 L66 16 C66 13, 60 13, 60 16 L60 54 C60 62, 40 62, 40 54 L40 16 C40 13, 34 13, 34 16 Z" fill="#D4AF37" stroke="#9B1B30" stroke-width="1.8"/>
+                <!-- Inner Highlight of Tilak -->
+                <path d="M37 18 L37 55 C37 66, 63 66, 63 55 L63 18" fill="none" stroke="#FFF9E6" stroke-width="1.2" stroke-linecap="round"/>
+                <!-- Auspicious Crimson Kumkum Chandlo (Full Moon Circle in Center) -->
+                <circle cx="50" cy="44" r="7.5" fill="#9B1B30" stroke="#FFFDF9" stroke-width="1.6"/>
+                <circle cx="48" cy="42" r="2" fill="#F39C12" opacity="0.65"/>
+            </g>
+        </defs>
+    </svg>
+
+    <!-- ===================================================================== -->
+    <!-- 2. ROYAL PALACE DWAR (DUAL TRADITION JAIN & SWAMINARAYAN DOORS)       -->
+    <!-- ===================================================================== -->
+    <div id="royalGateOverlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-ivory-100">
+        <!-- Left Ivory & Gold Carved Palace Door (Jain Tradition Crest) -->
+        <div class="gate-door-left w-1/2 h-full border-r-4 border-gold-500 relative flex flex-col justify-between p-4 sm:p-8 shadow-2xl">
+            <!-- Ornate Corner Filigree -->
+            <div class="w-16 h-16 sm:w-28 sm:h-28 border-t-2 border-l-2 border-crimson-700/60 rounded-tl-xl relative">
+                <div class="absolute top-2 left-2 w-3 h-3 rounded-full bg-gold-500"></div>
+            </div>
+            <!-- Left Door Sacred Tradition Emblem -->
+            <div class="hidden sm:flex flex-col items-start justify pr-6 md:pr-14 text-right">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full ivory-card-bright p-3 flex items-center justify-center shadow-lg mb-3">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <use id="gateLeftSvgUse" href="#jainSacredEmblem"></use>
+                    </svg>
+                </div>
+                <p class="font-hindi text-crimson-700 font-bold text-sm md:text-base tracking-wider" data-bind="leftDoorMantra">॥ श्री महावीर स्वामी नमः ॥</p>
+                <p class="font-cinzel text-[11px] uppercase tracking-widest text-gold-700 font-bold" data-bind="leftTraditionTitle">Sacred Jain Tradition</p>
+            </div>
+            <div class="w-16 h-16 sm:w-28 sm:h-28 border-b-2 border-l-2 border-crimson-700/60 rounded-bl-xl relative">
+                <div class="absolute bottom-2 left-2 w-3 h-3 rounded-full bg-gold-500"></div>
+            </div>
+        </div>
+
+        <!-- Right Ivory & Gold Carved Palace Door (Swaminarayan Tradition Crest) -->
+        <div class="gate-door-right w-1/2 h-full border-l-4 border-gold-500 relative flex flex-col justify-between items-end p-4 sm:p-8 shadow-2xl">
+            <!-- Ornate Corner Filigree -->
+            <div class="w-16 h-16 sm:w-28 sm:h-28 border-t-2 border-r-2 border-crimson-700/60 rounded-tr-xl relative">
+                <div class="absolute top-2 right-2 w-3 h-3 rounded-full bg-gold-500"></div>
+            </div>
+            <!-- Right Door Sacred Tradition Emblem -->
+            <div class="hidden sm:flex flex-col items-start justify-center pl-6 md:pl-14 text-left">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full ivory-card-bright p-3 flex items-center justify-center shadow-lg mb-3">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <use id="gateRightSvgUse" href="#swaminarayanSacredEmblem"></use>
+                    </svg>
+                </div>
+                <p class="font-hindi text-crimson-700 font-bold text-sm md:text-base tracking-wider" data-bind="rightDoorMantra">॥ श्री स्वामिनारायणो विजयतेतराम ॥</p>
+                <p class="font-cinzel text-[11px] uppercase tracking-widest text-gold-700 font-bold" data-bind="rightTraditionTitle">Swaminarayan Sampradaya</p>
+            </div>
+            <div class="w-16 h-16 sm:w-28 sm:h-28 border-b-2 border-r-2 border-crimson-700/60 rounded-br-xl relative">
+                <div class="absolute bottom-2 right-2 w-3 h-3 rounded-full bg-gold-500"></div>
+            </div>
+        </div>
+
+        <!-- Center Royal Dual-Crest Seal & "Open Invitation" Button -->
+        <div class="gate-seal-center absolute inset-0 flex flex-col items-center justify-center p-4 z-10 text-center">
+            <div class="relative max-w-lg w-full ivory-card-bright rounded-3xl p-6 sm:p-9 shadow-[0_20px_70px_rgba(155,27,48,0.22)] backdrop-blur-md">
+                <!-- Dual Sacred Medallions Uniting Jain & Swaminarayan Traditions -->
+                <div class="flex items-center justify-center gap-3 sm:gap-5 mb-4">
+                    <!-- Left Emblem Badge -->
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-ivory-50 border-2 border-gold-500 flex items-center justify-center shadow-md p-1.5">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <use class="use-left-emblem" href="#jainSacredEmblem"></use>
+                        </svg>
+                    </div>
+
+                    <!-- Auspicious Kalash / Lotus Union Symbol -->
+                    <div class="flex flex-col items-center">
+                        <span class="text-gold-600 text-xl sm:text-2xl">🪷</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-crimson-700">पावन संगम</span>
+                    </div>
+
+                    <!-- Right Emblem Badge -->
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-ivory-50 border-2 border-gold-500 flex items-center justify-center shadow-md p-1.5">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <use class="use-right-emblem" href="#swaminarayanSacredEmblem"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Dual Sacred Invocations -->
+                <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-crimson-700 font-hindi text-xs sm:text-sm font-bold mb-2">
+                    <span data-bind="leftShortInvocation">॥ णमो अरिहंताणं ॥</span>
+                    <span class="text-gold-500">•</span>
+                    <span data-bind="rightShortInvocation">॥ जय श्री स्वामिनारायण ॥</span>
+                </div>
+
+                <p class="text-xs uppercase tracking-[0.25em] text-gold-700 font-semibold mb-1.5" data-bind="hostFamilyLine">The Master & Dalal Families</p>
+                <h1 class="font-script text-4xl sm:text-5xl crimson-gold-text py-1 mb-2" data-bind="coupleShortTitle">Hem & Aarohi</h1>
+                <p class="font-cormorant italic text-base sm:text-xl text-crimson-900/90 mb-6 font-medium">
+                    Rejoice in the sacred union of two noble traditions and solicit your gracious presence & blessings
+                </p>
+
+                <button id="openGateBtn" onclick="openRoyalGate()" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full crimson-btn font-cinzel font-bold text-xs sm:text-sm tracking-wider uppercase hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer">
+                    <span>🪔 Tap to Open Royal Invitation</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 3. HANGING MARIGOLD (GENDA PHOOL) & MANGO LEAF TORAN GARLAND          -->
+    <!-- ===================================================================== -->
+    <div class="fixed top-0 left-0 right-0 z-40 pointer-events-none overflow-hidden h-16 sm:h-24">
+        <svg class="w-full h-full preserve-3d drop-shadow-md" viewBox="0 0 1440 110" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="mangoLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#15803D"/>
+                    <stop offset="65%" stop-color="#16A34A"/>
+                    <stop offset="100%" stop-color="#C59B27"/>
+                </linearGradient>
+                <radialGradient id="marigoldOrange" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#FDE047"/>
+                    <stop offset="55%" stop-color="#F97316"/>
+                    <stop offset="100%" stop-color="#C2410C"/>
+                </radialGradient>
+                <radialGradient id="marigoldYellow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#FEF9C3"/>
+                    <stop offset="60%" stop-color="#EAB308"/>
+                    <stop offset="100%" stop-color="#CA8A04"/>
+                </radialGradient>
+                <pattern id="toranPattern" x="0" y="0" width="180" height="110" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="180" height="7" fill="#C59B27"/>
+                    <path d="M20 7 Q30 28 20 45 Q10 28 20 7 Z" fill="url(#mangoLeaf)"/>
+                    <path d="M65 7 Q75 28 65 45 Q55 28 65 7 Z" fill="url(#mangoLeaf)"/>
+                    <path d="M115 7 Q125 28 115 45 Q105 28 115 7 Z" fill="url(#mangoLeaf)"/>
+                    <path d="M160 7 Q170 28 160 45 Q150 28 160 7 Z" fill="url(#mangoLeaf)"/>
+                    <g class="toran-sway">
+                        <path d="M 0,14 Q 90,82 180,14" fill="none" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 18"/>
+                        <path d="M 10,18 Q 90,88 170,18" fill="none" stroke="#EA580C" stroke-width="13" stroke-linecap="round" stroke-dasharray="1 22"/>
+                        <line x1="90" y1="50" x2="90" y2="84" stroke="#C59B27" stroke-width="2"/>
+                        <circle cx="90" cy="64" r="7" fill="url(#marigoldOrange)"/>
+                        <circle cx="90" cy="78" r="5.5" fill="#9B1B30"/>
+                        <path d="M84 91 L96 91 L93 83 L87 83 Z" fill="#C59B27"/>
+                    </g>
+                    <circle cx="0" cy="11" r="8.5" fill="url(#marigoldOrange)"/>
+                    <circle cx="22" cy="11" r="7.5" fill="url(#marigoldYellow)"/>
+                    <circle cx="45" cy="11" r="8.5" fill="url(#marigoldOrange)"/>
+                    <circle cx="67" cy="11" r="7.5" fill="url(#marigoldYellow)"/>
+                    <circle cx="90" cy="11" r="8.5" fill="#9B1B30"/>
+                    <circle cx="112" cy="11" r="7.5" fill="url(#marigoldYellow)"/>
+                    <circle cx="135" cy="11" r="8.5" fill="url(#marigoldOrange)"/>
+                    <circle cx="157" cy="11" r="7.5" fill="url(#marigoldYellow)"/>
+                    <circle cx="180" cy="11" r="8.5" fill="url(#marigoldOrange)"/>
+                </pattern>
+            </defs>
+            <rect x="0" y="0" width="1440" height="110" fill="url(#toranPattern)"/>
+        </svg>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 4. FLOATING QUICK CONTROLS (AUDIO, TV DISPLAY MODE, CUSTOMIZER)       -->
+    <!-- ===================================================================== -->
+    <div id="floatingControls" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-wrap items-center justify-end gap-2 sm:gap-3">
+        <!-- Sound / Shehnai Chime Toggle -->
+        <button id="audioToggleBtn" onclick="toggleFestiveAudio()" title="Toggle Auspicious Music" class="flex items-center gap-2 px-3.5 py-2.5 rounded-full ivory-card text-crimson-900 hover:bg-ivory-200 hover:scale-105 transition shadow-lg backdrop-blur-md text-xs sm:text-sm font-semibold cursor-pointer">
+            <span id="audioIcon">🔊</span>
+            <span id="audioLabel" class="hidden md:inline">Sangeet Tone</span>
+        </button>
+
+        <!-- TV Display Mode (Fullscreen + Gentle Auto-Scroll for 16:9 Smart TVs) -->
+        <button id="tvModeBtn" onclick="toggleTVDisplayMode()" title="TV Display Mode (Fullscreen + Auto Scroll)" class="flex items-center gap-2 px-3.5 py-2.5 rounded-full ivory-card text-crimson-900 hover:bg-ivory-200 hover:scale-105 transition shadow-lg backdrop-blur-md text-xs sm:text-sm font-semibold cursor-pointer">
+            <span>📺</span>
+            <span id="tvModeLabel" class="hidden sm:inline">TV Mode</span>
+        </button>
+
+        <!-- Customize Name, Date & Export for GitHub Button -->
+        <!-- <button id="openCustomizerBtn" onclick="toggleCustomizerModal(true)" class="flex items-center gap-2 px-4 py-2.5 rounded-full crimson-btn font-bold hover:scale-105 transition text-xs sm:text-sm cursor-pointer">
+            <span>✏️</span>
+            <span>Customize Names, Prayers & Date</span>
+        </button> -->
+    </div>
+
+    <!-- Top Quick Navigation Bar (Light Pearl Ivory & Gold) -->
+    <nav class="sticky top-0 z-30 backdrop-blur-md bg-ivory-50/90 border-b border-gold-400/40 pt-10 sm:pt-14 pb-3 px-4 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <a href="#hero" class="font-cinzel font-bold text-lg sm:text-xl crimson-gold-text tracking-wider flex items-center gap-2">
+                <span>🪔</span>
+                <span data-bind="coupleMonogram">H & A | Shubh Vivah</span>
+            </a>
+            <div class="flex items-center gap-4 sm:gap-7 text-xs sm:text-sm font-semibold text-crimson-900 overflow-x-auto py-1">
+                <a href="#sacred-prayers" class="hover:text-crimson-600 transition whitespace-nowrap">Sacred Prayers</a>
+                <a href="#muhurat" class="hover:text-crimson-600 transition whitespace-nowrap">Shubh Muhurat</a>
+                <a href="#couple" class="hover:text-crimson-600 transition whitespace-nowrap">Dulha & Dulhan</a>
+                <a href="#events" class="hover:text-crimson-600 transition whitespace-nowrap">Manglik Karyakram</a>
+                <a href="#venue" class="hover:text-crimson-600 transition whitespace-nowrap">Royal Venue</a>
+                <a href="#rsvp" class="px-3.5 py-1.5 rounded-full crimson-btn text-xs transition whitespace-nowrap">Aashirwad & RSVP</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================================================================== -->
+    <!-- 5. HERO SECTION (DUAL JAIN & SWAMINARAYAN INVOCATIONS & COUPLE NAMES) -->
+    <!-- ===================================================================== -->
+    <header id="hero" class="relative min-h-[92vh] flex items-center justify-center px-4 sm:px-8 py-12 sm:py-20 overflow-hidden">
+        <!-- Giant Subtle Rotating Sacred Mandala Watermark in Soft Gold & Crimson -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+            <svg class="w-[95vw] max-w-[860px] h-[95vw] max-h-[860px] text-gold-500 spin-mandala" viewBox="0 0 400 400" fill="none">
+                <circle cx="200" cy="200" r="190" stroke="#9B1B30" stroke-width="1.2" stroke-dasharray="6 6"/>
+                <circle cx="200" cy="200" r="165" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="200" cy="200" r="135" stroke="#E67E22" stroke-width="1.2"/>
+                <circle cx="200" cy="200" r="95" stroke="#9B1B30" stroke-width="1" stroke-dasharray="4 4"/>
+                <g stroke="currentColor" stroke-width="1.2">
+                    <path d="M200 10 C230 90, 230 310, 200 390 C170 310, 170 90, 200 10 Z"/>
+                    <path d="M10 200 C90 230, 310 230, 390 200 C310 170, 90 170, 10 200 Z"/>
+                    <path d="M65 65 C140 120, 280 260, 335 335 C260 280, 120 140, 65 65 Z"/>
+                    <path d="M335 65 C280 140, 140 280, 65 335 C120 260, 260 120, 335 65 Z"/>
+                    <polygon points="200,35 245,155 365,200 245,245 200,365 155,245 35,200 155,155" stroke="#9B1B30"/>
+                    <polygon points="83,83 185,140 317,83 260,185 317,317 215,260 83,317 140,215"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto text-center w-full">
+            <!-- Dual Sacred Header: Jain Emblem & Invocation (Left) + Swaminarayan Emblem & Invocation (Right) -->
+            <div class="reveal-item grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto mb-8">
+                <!-- Left Sacred Crest Banner -->
+                <div class="ivory-card rounded-2xl p-4 sm:p-5 flex items-center gap-4 text-left border-l-4 border-l-crimson-700">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-full bg-ivory-50 border-2 border-gold-500 p-1.5 shadow-md float-slow">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <use class="use-left-emblem" href="#jainSacredEmblem"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gold-700 font-bold block" data-bind="leftTraditionTitle">Sacred Jain Tradition</span>
+                        <p class="font-hindi text-crimson-700 text-base sm:text-lg font-bold mt-0.5" data-bind="leftDoorMantra">॥ श्री महावीर स्वामी नमः ॥</p>
+                        <p class="font-hindi text-crimson-900/85 text-xs sm:text-sm leading-snug mt-0.5" data-bind="leftHeroPrayer">
+                            णमो अरिहंताणं • णमो सिद्धाणं • णमो आयरियाणं
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Sacred Crest Banner -->
+                <div class="ivory-card rounded-2xl p-4 sm:p-5 flex items-center gap-4 text-left md:flex-row-reverse md:text-right border-r-4 border-r-crimson-700">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-full bg-ivory-50 border-2 border-gold-500 p-1.5 shadow-md float-slow">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <use class="use-right-emblem" href="#swaminarayanSacredEmblem"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gold-700 font-bold block" data-bind="rightTraditionTitle">Swaminarayan Sampradaya</span>
+                        <p class="font-hindi text-crimson-700 text-base sm:text-lg font-bold mt-0.5" data-bind="rightDoorMantra">॥ श्री स्वामिनारायणो विजयतेतराम ॥</p>
+                        <p class="font-hindi text-crimson-900/85 text-xs sm:text-sm leading-snug mt-0.5" data-bind="rightHeroPrayer">
+                            मंगलं भगवान विष्णुः, मंगलं गरुडध्वजः। मंगलं पुण्डरीकाक्षो॥
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parents & Family Blessings Intro -->
+            <div class="reveal-item space-y-1.5 mb-6">
+                <p class="font-cormorant uppercase tracking-[0.22em] text-gold-700 font-bold text-xs sm:text-base" data-bind="blessingsHeader">
+                    With the divine blessings of Bhagwan Mahavir, Lord Swaminarayan & Our Revered Ancestors
+                </p>
+                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-950 font-semibold" data-bind="parentsInviteLine">
+                    Mrs. Manisha & Mr. Jayesh Master cordially invite you to the auspicious wedding of
+                </p>
+            </div>
+
+            <!-- Royal Light Ivory & Gold Jharokha Hero Name Frame -->
+            <div class="reveal-item reveal-scale my-6 sm:my-8 p-6 sm:p-12 rounded-3xl ivory-card-bright shimmer-card relative max-w-4xl mx-auto">
+                <!-- Corner Crimson & Gold Lotus Ornaments -->
+                <div class="absolute top-3 left-3 w-7 h-7 border-t-2 border-l-2 border-crimson-700"></div>
+                <div class="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-crimson-700"></div>
+                <div class="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-crimson-700"></div>
+                <div class="absolute bottom-3 right-3 w-7 h-7 border-b-2 border-r-2 border-crimson-700"></div>
+
+                <div class="inline-block px-5 py-1.5 rounded-full bg-crimson-700/10 border border-crimson-700/30 text-crimson-700 font-bold text-xs sm:text-sm uppercase tracking-[0.28em] mb-4">
+                    🪷 शुभ विवाह • Sacred Union of Two Traditions 🪷
+                </div>
+
+                <!-- Groom & Bride Names -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-6 md:gap-10 my-2">
+                    <h2 class="hero-names font-cinzel font-black crimson-gold-text tracking-wide" data-bind="groomFirstName">Hem</h2>
+                    
+                    <!-- Auspicious Kalash / Gathbandhan Emblem Between Names -->
+                    <div class="flex flex-col items-center justify-center my-1 md:my-0">
+                        <span class="font-script text-4xl sm:text-5xl text-marigold-600">weds</span>
+                        <span class="font-hindi text-xs text-crimson-700 font-bold tracking-widest mt-0.5">संग</span>
+                    </div>
+
+                    <h2 class="hero-names font-cinzel font-black crimson-gold-text tracking-wide" data-bind="brideFirstName">Aarohi</h2>
+                </div>
+
+                <!-- Groom & Bride Parent Sub-lines -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gold-400/40 text-xs sm:text-sm text-crimson-950 font-cormorant">
+                    <div>
+                        <span class="text-crimson-700 uppercase tracking-widest font-bold block text-xs" data-bind="groomTraditionBadge">Hem | The Groom </span>
+                        <span class="text-base sm:text-lg font-semibold" data-bind="groomLineage">Grandson of Shri Tarunbhai Jain | Son of Mrs. Manisha & Mr. Jayesh Master</span>
+                    </div>
+                    <div>
+                        <span class="text-crimson-700 uppercase tracking-widest font-bold block text-xs" data-bind="brideTraditionBadge">Aarohi | The Bride </span>
+                        <span class="text-base sm:text-lg font-semibold" data-bind="brideLineage">Granddaughter of Shri M.L. Dalal | Daughter of Mrs. Kavita & Mr. Vikram Dalal</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlighted Animated Date Badge & Venue Pills -->
+            <div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8">
+                <a href="#muhurat" onclick="triggerPetalBurst(window.innerWidth/2, window.innerHeight/2, 55)" class="group flex items-center gap-3 px-7 py-4 rounded-full crimson-btn font-cinzel font-bold text-sm sm:text-base tracking-wider hover:scale-105 transition">
+                    <span>🗓️</span>
+                    <span data-bind="formattedWeddingDate">Friday, 12th December 2026</span>
+                </a>
+                <a href="#venue" class="flex items-center gap-3 px-7 py-4 rounded-full ivory-card-bright text-crimson-900 font-cinzel font-bold text-sm sm:text-base tracking-wider hover:bg-ivory-200 hover:scale-105 transition">
+                    <span>🏰</span>
+                    <span data-bind="venueShort">The Rambagh Palace Lawns, Jaipur</span>
+                </a>
+            </div>
+
+            <!-- Animated Flickering Diyas & Lotus Divider Row -->
+            <div class="flex items-center justify-center gap-6 sm:gap-14 mt-12">
+                <!-- Left Diya -->
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 sm:w-14 sm:h-14 overflow-visible" viewBox="0 0 64 64">
+                        <path class="diya-flame" d="M32 10 C38 20, 40 28, 32 34 C24 28, 26 20, 32 10 Z" fill="#F39C12"/>
+                        <path class="diya-flame" d="M32 16 C35 22, 36 27, 32 32 C28 27, 29 22, 32 16 Z" fill="#FFFDF9"/>
+                        <path d="M12 34 Q32 40 52 34 L46 50 Q32 56 18 50 Z" fill="#9B1B30" stroke="#C59B27" stroke-width="2"/>
+                        <path d="M18 37 Q32 42 46 37" fill="none" stroke="#F3D678" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="h-0.5 w-20 sm:w-44 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+                <div class="text-crimson-700 font-hindi font-bold text-sm sm:text-base tracking-widest">🪷 जय जिनेंद्र • जय स्वामिनारायण 🪷</div>
+                <div class="h-0.5 w-20 sm:w-44 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+                <!-- Right Diya -->
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 sm:w-14 sm:h-14 overflow-visible" viewBox="0 0 64 64">
+                        <path class="diya-flame" d="M32 10 C38 20, 40 28, 32 34 C24 28, 26 20, 32 10 Z" fill="#F39C12"/>
+                        <path class="diya-flame" d="M32 16 C35 22, 36 27, 32 32 C28 27, 29 22, 32 16 Z" fill="#FFFDF9"/>
+                        <path d="M12 34 Q32 40 52 34 L46 50 Q32 56 18 50 Z" fill="#9B1B30" stroke="#C59B27" stroke-width="2"/>
+                        <path d="M18 37 Q32 42 46 37" fill="none" stroke="#F3D678" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- 5B. SACRED BLESSINGS OF TWO TRADITIONS (JAIN & SWAMINARAYAN PRAYERS)  -->
+    <!-- ===================================================================== -->
+    <section id="sacred-prayers" class="relative py-16 sm:py-24 px-4 sm:px-8 border-t border-gold-400/35 bg-ivory-50/75">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal-item text-center mb-12">
+                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| दो पावन परंपराओं का दिव्य संगम ||</p>
+                <h2 class="section-heading font-cinzel font-black crimson-gold-text">Sacred Invocations & Blessings</h2>
+                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
+                    Honoring the timeless spiritual heritage of Jainism and the Swaminarayan Sampradaya as two families unite as one.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
+                <!-- LEFT SACRED PRAYER CARD (JAIN NAMOKAR MANTRA & PRATEEK CHIHNA) -->
+                <div class="reveal-item reveal-left jharokha-frame p-7 sm:p-11 flex flex-col items-center text-center justify-between">
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full ivory-card-bright p-2.5 shadow-lg mb-4 float-slow">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <use class="use-left-emblem" href="#jainSacredEmblem"></use>
+                            </svg>
+                        </div>
+                        <span class="px-4 py-1 rounded-full bg-crimson-700/10 border border-crimson-700/30 text-crimson-700 font-cinzel font-bold text-xs uppercase tracking-widest mb-2" data-bind="leftTraditionTitle">
+                            Sacred Jain Tradition
+                        </span>
+                        <h3 class="font-hindi font-bold text-2xl sm:text-3xl text-crimson-800 my-2" data-bind="leftDoorMantra">
+                            ॥ श्री महावीर स्वामी नमः ॥
+                        </h3>
+                        <div class="w-20 h-0.5 bg-gold-500/60 my-3"></div>
+                        <p class="font-hindi text-base sm:text-lg text-crimson-950 leading-relaxed font-semibold max-w-md whitespace-pre-line" data-bind="leftFullMantra">
+                            णमो अरिहंताणं, णमो सिद्धाणं,
+                            णमो आयरियाणं, णमो उवज्झायाणं,
+                            णमो लोए सव्व साहूणं॥
+                            एसो पंच णमोक्कारो, सव्व पावप्पणासणो।
+                            मंगलाणं च सव्वेसिं, पढमं हवई मंगलं॥
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold-400/40 w-full">
+                        <p class="font-cormorant italic text-base sm:text-lg text-gold-700 font-bold" data-bind="leftMantraMeaning">
+                            “Parasparopagraho Jivanam — All life is bound together by mutual support and harmony.”
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RIGHT SACRED PRAYER CARD (SWAMINARAYAN SHLOKA & TILAK CHANDLO) -->
+                <div class="reveal-item reveal-right jharokha-frame p-7 sm:p-11 flex flex-col items-center text-center justify-between">
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full ivory-card-bright p-2.5 shadow-lg mb-4 float-slow">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <use class="use-right-emblem" href="#swaminarayanSacredEmblem"></use>
+                            </svg>
+                        </div>
+                        <span class="px-4 py-1 rounded-full bg-crimson-700/10 border border-crimson-700/30 text-crimson-700 font-cinzel font-bold text-xs uppercase tracking-widest mb-2" data-bind="rightTraditionTitle">
+                            Swaminarayan Sampradaya
+                        </span>
+                        <h3 class="font-hindi font-bold text-2xl sm:text-3xl text-crimson-800 my-2" data-bind="rightDoorMantra">
+                            ॥ श्री स्वामिनारायणो विजयतेतराम ॥
+                        </h3>
+                        <div class="w-20 h-0.5 bg-gold-500/60 my-3"></div>
+                        <p class="font-hindi text-base sm:text-lg text-crimson-950 leading-relaxed font-semibold max-w-md whitespace-pre-line" data-bind="rightFullMantra">
+                            मंगलं भगवान विष्णुः, मंगलं गरुडध्वजः।
+                            मंगलं पुण्डरीकाक्षो, मंगलाय तनो हरिः॥
+                            श्री स्वामिनारायण भगवान एवं अक्षर-पुरुषोत्तम महाराज की असीम कृपा से॥
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold-400/40 w-full">
+                        <p class="font-cormorant italic text-base sm:text-lg text-gold-700 font-bold" data-bind="rightMantraMeaning">
+                            “Jay Swaminarayan — May Lord Swaminarayan shower eternal peace, devotion, and auspiciousness upon this union.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. SHUBH MUHURAT DATE ANIMATION & MANDALA COUNTDOWN SECTION           -->
+    <!-- ===================================================================== -->
+    <section id="muhurat" class="relative py-20 sm:py-28 px-4 sm:px-8 border-t border-gold-400/35 bg-ivory-100/60">
+        <div class="max-w-7xl mx-auto text-center">
+            <!-- Section Header -->
+            <div class="reveal-item mb-12">
+                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| शुभ लग्न एवं मुहूर्त ||</p>
+                <h2 class="section-heading font-cinzel font-black crimson-gold-text">Auspicious Date & Countdown</h2>
+                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
+                    Every second brings us closer to the sacred moment when the Shehnai plays and two families unite.
+                </p>
+            </div>
+
+            <!-- Animated Grand Date Reveal Banner (Light Ivory & Gold) -->
+            <div class="reveal-item reveal-scale max-w-4xl mx-auto mb-14 p-6 sm:p-10 rounded-3xl ivory-card-bright shimmer-card relative">
+                <p class="text-xs sm:text-sm uppercase tracking-[0.35em] text-crimson-700 font-bold mb-3">✨ Save The Auspicious Date ✨</p>
+                
+                <!-- Animated Date Display with Day, Month, Year & Time -->
+                <div id="animatedDateStage" class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 my-4">
+                    <div class="px-6 py-2.5 rounded-2xl bg-blush-100/80 border border-gold-500/50 shadow-sm">
+                        <span class="block text-xs uppercase tracking-widest text-crimson-700 font-bold">Vaar (Day)</span>
+                        <span class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-950" data-bind="weddingDayName">Friday</span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="date-display-text font-cinzel font-black crimson-gold-text tracking-wider leading-tight" data-bind="weddingDateBig">
+                            12 • DECEMBER • 2026
+                        </div>
+                        <div class="text-base sm:text-lg text-marigold-600 font-cormorant font-bold italic mt-1" data-bind="muhuratTimeText">
+                            Shubh Muhurat (Hasta Melap): 07:45 PM IST
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-2.5 rounded-2xl bg-blush-100/80 border border-gold-500/50 shadow-sm">
+                        <span class="block text-xs uppercase tracking-widest text-crimson-700 font-bold">Nakshatra</span>
+                        <span class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-950">Rohini • Shubh</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Celebrate / Calendar Action Bar -->
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 pt-5 border-t border-gold-400/35">
+                    <button onclick="celebrateDateAnimation(event)" class="px-5 py-2.5 rounded-full crimson-btn font-semibold text-xs sm:text-sm hover:scale-105 active:scale-95 transition flex items-center gap-2 cursor-pointer">
+                        <span>🌸</span>
+                        <span>Shower Petals & Celebrate Date</span>
+                    </button>
+                    <button onclick="openGoogleCalendar()" class="px-5 py-2.5 rounded-full gold-btn font-semibold text-xs sm:text-sm hover:scale-105 transition flex items-center gap-2 cursor-pointer">
+                        <span>📅</span>
+                        <span>Add to Google Calendar</span>
+                    </button>
+                    <!-- <button onclick="toggleCustomizerModal(true)" class="px-5 py-2.5 rounded-full bg-ivory-50 border border-crimson-700/40 text-crimson-800 font-semibold hover:bg-blush-100 text-xs sm:text-sm transition flex items-center gap-2 cursor-pointer">
+                        <span>✏️</span>
+                        <span>Change Date or Name</span>
+                    </button> -->
+                </div>
+            </div>
+
+            <!-- 4 Ornate Gold-Trimmed Ivory Countdown Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto">
+                <!-- DAYS CARD -->
+                <div class="reveal-item relative p-5 sm:p-8 rounded-3xl ivory-card-bright flex flex-col items-center justify-center group hover:-translate-y-1 transition duration-300">
+                    <div class="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                        <svg class="w-full h-full -rotate-90" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" stroke="rgba(197,155,39,0.22)" stroke-width="6" fill="none"/>
+                            <circle id="ringDays" cx="60" cy="60" r="52" stroke="url(#crimsonGoldGrad)" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="326.7" stroke-dashoffset="60" class="transition-all duration-700"/>
+                            <defs>
+                                <linearGradient id="crimsonGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#9B1B30"/>
+                                    <stop offset="50%" stop-color="#E67E22"/>
+                                    <stop offset="100%" stop-color="#C59B27"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="cdDays" class="font-cinzel font-black text-3xl sm:text-5xl crimson-gold-text">00</span>
+                            <span class="font-hindi text-xs text-crimson-700 font-bold mt-0.5">दिन</span>
+                        </div>
+                    </div>
+                    <span class="font-cinzel font-bold uppercase tracking-[0.25em] text-xs sm:text-sm text-crimson-900 mt-3">Days</span>
+                </div>
+
+                <!-- HOURS CARD -->
+                <div class="reveal-item relative p-5 sm:p-8 rounded-3xl ivory-card-bright flex flex-col items-center justify-center group hover:-translate-y-1 transition duration-300">
+                    <div class="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                        <svg class="w-full h-full -rotate-90" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" stroke="rgba(197,155,39,0.22)" stroke-width="6" fill="none"/>
+                            <circle id="ringHours" cx="60" cy="60" r="52" stroke="url(#crimsonGoldGrad)" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="326.7" stroke-dashoffset="120" class="transition-all duration-700"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="cdHours" class="font-cinzel font-black text-3xl sm:text-5xl crimson-gold-text">00</span>
+                            <span class="font-hindi text-xs text-crimson-700 font-bold mt-0.5">घंटे</span>
+                        </div>
+                    </div>
+                    <span class="font-cinzel font-bold uppercase tracking-[0.25em] text-xs sm:text-sm text-crimson-900 mt-3">Hours</span>
+                </div>
+
+                <!-- MINUTES CARD -->
+                <div class="reveal-item relative p-5 sm:p-8 rounded-3xl ivory-card-bright flex flex-col items-center justify-center group hover:-translate-y-1 transition duration-300">
+                    <div class="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                        <svg class="w-full h-full -rotate-90" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" stroke="rgba(197,155,39,0.22)" stroke-width="6" fill="none"/>
+                            <circle id="ringMinutes" cx="60" cy="60" r="52" stroke="url(#crimsonGoldGrad)" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="326.7" stroke-dashoffset="180" class="transition-all duration-700"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="cdMinutes" class="font-cinzel font-black text-3xl sm:text-5xl crimson-gold-text">00</span>
+                            <span class="font-hindi text-xs text-crimson-700 font-bold mt-0.5">मिनट</span>
+                        </div>
+                    </div>
+                    <span class="font-cinzel font-bold uppercase tracking-[0.25em] text-xs sm:text-sm text-crimson-900 mt-3">Minutes</span>
+                </div>
+
+                <!-- SECONDS CARD -->
+                <div class="reveal-item relative p-5 sm:p-8 rounded-3xl ivory-card-bright flex flex-col items-center justify-center group hover:-translate-y-1 transition duration-300">
+                    <div class="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+                        <svg class="w-full h-full -rotate-90" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" stroke="rgba(197,155,39,0.22)" stroke-width="6" fill="none"/>
+                            <circle id="ringSeconds" cx="60" cy="60" r="52" stroke="url(#crimsonGoldGrad)" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="326.7" stroke-dashoffset="240" class="transition-all duration-300"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="cdSeconds" class="font-cinzel font-black text-3xl sm:text-5xl crimson-gold-text">00</span>
+                            <span class="font-hindi text-xs text-crimson-700 font-bold mt-0.5">सेकंड</span>
+                        </div>
+                    </div>
+                    <span class="font-cinzel font-bold uppercase tracking-[0.25em] text-xs sm:text-sm text-crimson-900 mt-3">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Live Status Message Under Countdown -->
+            <p id="countdownStatusBanner" class="mt-8 font-cormorant font-semibold italic text-xl sm:text-2xl text-crimson-800">
+                Counting down every blessed moment until the Shehnai plays!
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. DULHA & DULHAN SHOWCASE (LIGHT IVORY JHAROKHA ARCH PORTRAIT CARDS) -->
+    <!-- ===================================================================== -->
+    <section id="couple" class="relative py-20 sm:py-28 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Heading -->
+            <div class="reveal-item text-center mb-16">
+                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| वर एवं वधू परिचय ||</p>
+                <h2 class="section-heading font-cinzel font-black crimson-gold-text">The Royal Couple</h2>
+                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
+                    “Matches are made in heaven, and blessed on earth in the presence of family and loved ones.”
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-11 gap-8 sm:gap-12 items-center">
+                <!-- THE GROOM (DULHA) JHAROKHA CARD -->
+                <div class="reveal-item reveal-left lg:col-span-5 jharokha-frame p-6 sm:p-10 text-center flex flex-col items-center">
+                    <span class="px-4 py-1.5 rounded-full crimson-btn font-cinzel font-bold text-xs uppercase tracking-widest mb-6 shadow-md">
+                        👑 Hem • The Groom
+                    </span>
+
+                    <!-- Royal Arch Portrait Container -->
+                    <div class="w-52 h-64 sm:w-64 sm:h-76 jharokha-inner-arch border-2 border-gold-500 p-2 bg-ivory-50 shadow-md mb-6 relative overflow-hidden group">
+                        <img id="groomPortraitImg" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=700&q=80" 
+                             onerror="this.src='https://placehold.co/500x600/FDF6EC/9B1B30?text=Hem+Dulha'" 
+                             alt="The Groom" 
+                             class="w-full h-full object-cover jharokha-inner-arch group-hover:scale-105 transition duration-700">
+                    </div>
+
+                    <h3 class="font-cinzel font-bold text-2xl sm:text-4xl crimson-gold-text mb-1" data-bind="groomFullName">Hem Jayesh Master</h3>
+                    <p class="text-crimson-800 font-cormorant font-semibold italic text-lg sm:text-xl mb-3" data-bind="groomBio">
+                        Warm-hearted, ambitious, and deeply rooted in family values, embarking on life's grandest adventure.
+                    </p>
+                    <div class="w-24 h-0.5 bg-gold-400/60 my-3"></div>
+                    <p class="text-xs sm:text-sm text-crimson-950 font-medium leading-relaxed" data-bind="groomLineage">
+                        Grandson of Shri R.P. Sharma | Son of Mrs. Sunita & Mr. Rajesh Sharma
+                    </p>
+                </div>
+
+                <!-- CENTER SACRED AGNI / GATHBANDHAN SYMBOL -->
+                <div class="reveal-item reveal-scale lg:col-span-1 flex flex-col items-center justify-center py-4">
+                    <div class="w-20 h-20 rounded-full crimson-btn flex items-center justify-center shadow-xl float-slow">
+                        <span class="font-hindi text-xl text-gold-200 font-bold">शुभ मिलन</span>
+                    </div>
+                </div>
+
+                <!-- THE BRIDE (DULHAN) JHAROKHA CARD -->
+                <div class="reveal-item reveal-right lg:col-span-5 jharokha-frame p-6 sm:p-10 text-center flex flex-col items-center">
+                    <span class="px-4 py-1.5 rounded-full crimson-btn font-cinzel font-bold text-xs uppercase tracking-widest mb-6 shadow-md">
+                        🪷 Arohi • The Bride
+                    </span>
+
+                    <!-- Royal Arch Portrait Container -->
+                    <div class="w-52 h-64 sm:w-64 sm:h-76 jharokha-inner-arch border-2 border-gold-500 p-2 bg-ivory-50 shadow-md mb-6 relative overflow-hidden group">
+                        <img id="bridePortraitImg" src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=700&q=80" 
+                             onerror="this.src='https://placehold.co/500x600/FDF6EC/9B1B30?text=Ayushmati+Dulhan'" 
+                             alt="The Bride" 
+                             class="w-full h-full object-cover jharokha-inner-arch group-hover:scale-105 transition duration-700">
+                    </div>
+
+                    <h3 class="font-cinzel font-bold text-2xl sm:text-4xl crimson-gold-text mb-1" data-bind="brideFullName">Aarohi Dalal</h3>
+                    <p class="text-crimson-800 font-cormorant font-semibold italic text-lg sm:text-xl mb-3" data-bind="brideBio">
+                        Graceful, radiant, and full of laughter, bringing joy and auspiciousness into our family home.
+                    </p>
+                    <div class="w-24 h-0.5 bg-gold-400/60 my-3"></div>
+                    <p class="text-xs sm:text-sm text-crimson-950 font-medium leading-relaxed" data-bind="brideLineage">
+                        Granddaughter of Shri M.L. Verma | Daughter of Mrs. Kavita & Mr. Vikram Verma
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. MANGLIK KARYAKRAM (AUSPICIOUS EVENTS TIMELINE IN JHAROKHA CARDS)   -->
+    <!-- ===================================================================== -->
+    <section id="events" class="relative py-20 sm:py-28 px-4 sm:px-8 border-t border-gold-400/35 bg-ivory-100/70">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="reveal-item text-center mb-16">
+                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| मांगलिक कार्यक्रम ||</p>
+                <h2 class="section-heading font-cinzel font-black crimson-gold-text">Manglik Karyakram</h2>
+                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
+                    Join us across three vibrant days of sacred rituals, turmeric blessings, henna art, music, and royal festivities.
+                </p>
+            </div>
+
+            <!-- Events Grid (Ornate Light Ivory & Gold Jharokha Cards) -->
+            <div id="eventsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-9">
+                <!-- Dynamically Rendered from WEDDING_CONFIG.events -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 9. ROYAL VENUE, BARAAT ASSEMBLY & HOSPITALITY                         -->
+    <!-- ===================================================================== -->
+    <section id="venue" class="relative py-20 sm:py-28 px-4 sm:px-8 border-t border-gold-400/35">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal-item text-center mb-12">
+                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| विवाह स्थल एवं स्वागत ||</p>
+                <h2 class="section-heading font-cinzel font-black crimson-gold-text">Royal Venue & Baraat Route</h2>
+            </div>
+
+            <div class="reveal-item rounded-3xl ivory-card-bright p-6 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-crimson-700/10 border border-crimson-700/30 text-crimson-700 font-bold text-xs uppercase tracking-widest">
+                        <span>🏰</span> Primary Wedding Destination
+                    </div>
+                    <h3 class="font-cinzel font-bold text-2xl sm:text-4xl crimson-gold-text" data-bind="venueName">The Grand Rambagh Palace Lawns</h3>
+                    <p class="text-base sm:text-lg text-crimson-950 font-medium leading-relaxed" data-bind="venueAddress">
+                        Bhawani Singh Road, Rambagh, Jaipur, Rajasthan 302005, India
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-ivory-100 border border-gold-400/50">
+                            <span class="text-xs uppercase tracking-wider text-crimson-700 font-bold block mb-1">🐎 Ghurchadhi & Baraat Assembly</span>
+                            <p class="text-sm text-crimson-950 font-medium" data-bind="baraatNote">Assemble at Main Palace Gate at 5:30 PM with Royal Dhol & Brass Band.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-ivory-100 border border-gold-400/50">
+                            <span class="text-xs uppercase tracking-wider text-crimson-700 font-bold block mb-1">🛎️ Guest Hospitality Desk</span>
+                            <p class="text-sm text-crimson-950 font-medium" data-bind="rsvpContact">RSVP & Concierge: +91 98765 43210 (Sharma Parivar)</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a id="venueMapLink" href="https://www.google.com/maps/search/?api=1&query=Rambagh+Palace+Jaipur" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full crimson-btn font-cinzel font-bold text-xs sm:text-sm tracking-wider hover:scale-105 transition">
+                            <span>📍</span> Open Location in Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ornate Palace Illustration Card -->
+                <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 rounded-2xl bg-blush-100/70 border-2 border-gold-400/60 text-center">
+                    <svg class="w-28 h-28 text-crimson-700 mb-4" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M60 12 C45 26, 42 36, 42 45 H78 C78 36, 75 26, 60 12 Z" fill="rgba(197,155,39,0.28)"/>
+                        <line x1="60" y1="4" x2="60" y2="12"/>
+                        <path d="M25 28 C16 36, 15 44, 15 50 H35 C35 44, 34 36, 25 28 Z" fill="rgba(197,155,39,0.2)"/>
+                        <path d="M95 28 C86 36, 85 44, 85 50 H105 C105 44, 104 36, 95 28 Z" fill="rgba(197,155,39,0.2)"/>
+                        <rect x="12" y="50" width="96" height="52" rx="2"/>
+                        <path d="M46 102 V74 C46 64, 74 64, 74 74 V102"/>
+                        <path d="M20 102 V80 C20 73, 34 73, 34 80 V102"/>
+                        <path d="M86 102 V80 C86 73, 100 73, 100 80 V102"/>
+                        <line x1="6" y1="102" x2="114" y2="102" stroke-width="3"/>
+                    </svg>
+                    <p class="font-hindi text-crimson-700 font-bold text-lg mb-1">“अतिथि देवो भवः”</p>
+                    <p class="font-cormorant italic text-base sm:text-lg text-crimson-950 font-medium">
+                        Your gracious presence is the greatest blessing to our family. Valet parking & traditional Rajasthani welcome await you at the gate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 10. AASHIRWAD & RSVP BLESSINGS WALL                                   -->
+    <!-- ===================================================================== -->
+    <section id="rsvp" class="relative py-20 sm:py-28 px-4 sm:px-8 border-t border-gold-400/35 bg-ivory-100/80">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal-item text-center mb-14">
+                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| शुभ आशीर्वाद एवं उपस्थिति ||</p>
+                <h2 class="section-heading font-cinzel font-black crimson-gold-text">Send Your Aashirwad & RSVP</h2>
+                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
+                    Confirm your attendance and shower the newlyweds with your heartfelt blessings.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
+                <!-- RSVP & Blessing Submission Form -->
+                <div class="reveal-item lg:col-span-5 rounded-3xl ivory-card-bright p-6 sm:p-8">
+                    <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-800 mb-6 flex items-center gap-2">
+                        <span>🪷</span> Confirm Attendance & Blessing
+                    </h3>
+
+                    <form id="rsvpForm" onsubmit="submitBlessingRSVP(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Your Full Name / Family Name *</label>
+                            <input type="text" id="guestName" required placeholder="e.g., Mr. & Mrs. Kapil Malhotra" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 placeholder-crimson-900/40 focus:outline-none focus:border-crimson-700 text-sm font-medium">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Will You Attend? *</label>
+                                <select id="guestAttendance" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 focus:outline-none focus:border-crimson-700 text-sm font-medium">
+                                    <option value="Joyfully Attending ✨">Joyfully Attending ✨</option>
+                                    <option value="Sending Warm Blessings from Afar 🙏">Blessings from Afar 🙏</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Number of Guests</label>
+                                <select id="guestCount" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 focus:outline-none focus:border-crimson-700 text-sm font-medium">
+                                    <option value="1 Guest">1 Guest</option>
+                                    <option value="2 Guests (Couple)" selected>2 Guests (Couple)</option>
+                                    <option value="3 Guests">3 Guests</option>
+                                    <option value="4+ Guests (Full Family)">4+ Guests (Full Family)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Your Aashirwad / Message for the Couple *</label>
+                            <textarea id="guestMessage" required rows="3" placeholder="Write your blessings for the bride and groom..." class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 placeholder-crimson-900/40 focus:outline-none focus:border-crimson-700 text-sm font-medium"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-full crimson-btn font-cinzel font-bold text-sm uppercase tracking-wider hover:scale-[1.02] active:scale-95 transition cursor-pointer">
+                            🌺 Shower Petals & Post Aashirwad
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Aashirwad & Blessings Wall -->
+                <div class="reveal-item lg:col-span-7 space-y-4">
+                    <div class="flex items-center justify-between border-b border-gold-500/40 pb-3">
+                        <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-800">💐 Live Family Blessings Wall</h3>
+                        <span id="blessingCounter" class="text-xs font-bold px-3 py-1 rounded-full bg-crimson-700/10 text-crimson-700 border border-crimson-700/30">4 Blessings</span>
+                    </div>
+
+                    <div id="blessingsWallList" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[520px] overflow-y-auto pr-1">
+                        <!-- Dynamically populated from localStorage & default blessings -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 11. ROYAL LIGHT FOOTER WITH BAL MANUHAR (KIDS' CUTE INVITATION)       -->
+    <!-- ===================================================================== -->
+    <footer class="relative py-16 px-4 sm:px-8 border-t-2 border-gold-400/50 bg-ivory-200/90 text-center overflow-hidden">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <!-- Traditional Bal-Manuhar (Sweet Rhyme by Nieces/Nephews) -->
+            <div class="inline-block px-6 py-4 rounded-2xl ivory-card-bright max-w-xl">
+                <p class="text-xs font-bold uppercase tracking-widest text-crimson-700 mb-1">🎈 Bal Manuhar</p>
+                <p class="font-hindi text-base sm:text-lg text-crimson-950 font-semibold italic">
+                    “हल्दी है चंदन है, रिश्तों का बंधन है — हमारे हेमभाई और आरोहीभाभी की शादी में आपका हार्दिक अभिनंदन है!”
+                </p>
+            </div>
+
+            <h2 class="font-script text-5xl sm:text-6xl crimson-gold-text py-2" data-bind="coupleShortTitle">Hem & Aarohi</h2>
+            <p class="font-cinzel font-bold text-xs sm:text-sm uppercase tracking-[0.28em] text-crimson-800" data-bind="footerHosts">
+                With Best Compliments From: All Relatives & Friends of the Master Parivar
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- 12. LIVE CUSTOMIZER MODAL (EDIT NAME, DATE, LIGHT THEME & EXPORT)     -->
+    <!-- ===================================================================== -->
+    <div id="customizerModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-crimson-950/60 backdrop-blur-md">
+        <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl ivory-card-bright p-6 sm:p-8 text-crimson-950 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gold-400/50 pb-4 mb-6">
+                <div>
+                    <h3 class="font-cinzel font-bold text-xl sm:text-2xl crimson-gold-text">✏️ Customize Wedding Names, Date & Theme</h3>
+                    <p class="text-xs text-crimson-800 font-medium mt-0.5">Edit your brother's details below. Changes animate immediately & can be downloaded as a ready-to-host GitHub `index.html` file!</p>
+                </div>
+                <button onclick="toggleCustomizerModal(false)" class="w-9 h-9 rounded-full bg-blush-100 border border-crimson-700/40 text-crimson-800 hover:bg-crimson-700 hover:text-white transition flex items-center justify-center font-bold cursor-pointer">✕</button>
+            </div>
+
+            <form id="customizerForm" onsubmit="applyCustomization(event)" class="space-y-4 text-left">
+                <!-- Light Theme Variation Selector -->
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">🎨 Select Light Royal Theme Variation</label>
+                    <select id="cfgThemeVariant" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-semibold text-sm">
+                        <option value="ivory-crimson">1. Warm Ivory & Sindoor Crimson (Classic Royal)</option>
+                        <option value="peach-gold">2. Pastel Peach & Antique Gold (Soft Blush)</option>
+                        <option value="cream-marigold">3. Royal Cream & Marigold (Festive Haldi/Genda)</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's First Name (Brother)</label>
+                        <input type="text" id="cfgGroomFirst" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Bride's First Name (Bhabhi)</label>
+                        <input type="text" id="cfgBrideFirst" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's Full Name</label>
+                        <input type="text" id="cfgGroomFull" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Bride's Full Name</label>
+                        <input type="text" id="cfgBrideFull" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Wedding Date & Muhurat Time (Countdown Target)</label>
+                        <input type="datetime-local" id="cfgWeddingISO" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Muhurat Display Note</label>
+                        <input type="text" id="cfgMuhuratText" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's Parents & Grandparents Line</label>
+                        <input type="text" id="cfgGroomLineage" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Bride's Parents & Grandparents Line</label>
+                        <input type="text" id="cfgBrideLineage" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Royal Venue Name</label>
+                        <input type="text" id="cfgVenueName" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Venue Full Address & City</label>
+                        <input type="text" id="cfgVenueAddress" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Parents' Main Invitation Header</label>
+                    <input type="text" id="cfgParentsInvite" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
+                </div>
+
+                <div class="flex items-center gap-2 pt-2">
+                    <input type="checkbox" id="cfgHideCustomizerOnExport" class="w-4 h-4 accent-crimson-700">
+                    <label for="cfgHideCustomizerOnExport" class="text-xs text-crimson-900 font-semibold">Hide the "✏️ Customize Name & Date" button in the downloaded file (recommended when sharing with guests on GitHub)</label>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gold-400/50">
+                    <button type="submit" class="px-6 py-3 rounded-full crimson-btn font-cinzel font-bold text-xs sm:text-sm uppercase tracking-wider hover:scale-105 transition cursor-pointer">
+                        ✨ Apply & Animate Countdown Now
+                    </button>
+                </div>
+            </div>
+
+            <form id="customizerForm" onsubmit="applyCustomization(event)" class="space-y-4 text-left">
+                <!-- Light Theme Variation & Tradition Alignment Selector -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">🎨 Light Royal Theme Variation</label>
+                        <select id="cfgThemeVariant" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-semibold text-sm">
+                            <option value="ivory-crimson">1. Warm Ivory & Sindoor Crimson</option>
+                            <option value="peach-gold">2. Pastel Peach & Antique Gold</option>
+                            <option value="cream-marigold">3. Royal Cream & Marigold</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">🪷 Groom & Bride Tradition Order</label>
+                        <select id="cfgTraditionOrder" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-semibold text-sm">
+                            <option value="jain-swaminarayan">Groom: Jain | Bride: Swaminarayan</option>
+                            <option value="swaminarayan-jain">Groom: Swaminarayan | Bride: Jain</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Sacred Jain & Swaminarayan Mantra Customization -->
+                <div class="p-4 rounded-2xl bg-ivory-100 border border-gold-400/60 space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-wider text-crimson-700">🙏 Sacred Jain & Swaminarayan Invocations</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Jain Invocation Header</label>
+                            <input type="text" id="cfgJainHeader" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Swaminarayan Invocation Header</label>
+                            <input type="text" id="cfgSwamiHeader" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Jain Prayer / Namokar Mantra</label>
+                            <textarea id="cfgJainPrayer" rows="2" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Swaminarayan Prayer / Shloka</label>
+                            <textarea id="cfgSwamiPrayer" rows="2" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's First Name (Brother)</label>
+    <!-- ===================================================================== -->
+    <!-- 13. JAVASCRIPT CONFIGURATION, ANIMATIONS, COUNTDOWN & AUDIO ENGINE    -->
+    <!-- ===================================================================== -->
+    <script>
+        /* ===================================================================
+         * 👑 EASY WEDDING CONFIGURATION (EDIT HERE OR VIA THE ON-SCREEN BUTTON)
+         * =================================================================== */
+        /*__WEDDING_CONFIG_START__*/
+        let WEDDING_CONFIG = {
+            themeVariant: "ivory-crimson",
+            traditionOrder: "jain-swaminarayan", // "jain-swaminarayan" or "swaminarayan-jain"
+            jainHeader: "॥ श्री महावीर स्वामी नमः ॥",
+            jainShortInvocation: "॥ णमो अरिहंताणं ॥",
+            jainHeroPrayer: "णमो अरिहंताणं • णमो सिद्धाणं • णमो आयरियाणं",
+            jainFullMantra: "णमो अरिहंताणं, णमो सिद्धाणं,\nणमो आयरियाणं, णमो उवज्झायाणं,\nणमो लोए सव्व साहूणं॥\nएसो पंच णमोक्कारो, सव्व पावप्पणासणो।\nमंगलाणं च सव्वेसिं, पढमं हवई मंगलं॥",
+            jainMantraMeaning: "“Parasparopagraho Jivanam — All life is bound together by mutual support and harmony.”",
+            swamiHeader: "॥ श्री स्वामिनारायणो विजयतेतराम ॥",
+            swamiShortInvocation: "॥ जय श्री स्वामिनारायण ॥",
+            swamiHeroPrayer: "मंगलं भगवान विष्णुः, मंगलं गरुडध्वजः। मंगलं पुण्डरीकाक्षो॥",
+            swamiFullMantra: "मंगलं भगवान विष्णुः, मंगलं गरुडध्वजः।\nमंगलं पुण्डरीकाक्षो, मंगलाय तनो हरिः॥\nश्री स्वामिनारायण भगवान एवं अक्षर-पुरुषोत्तम महाराज की असीम कृपा से॥",
+            swamiMantraMeaning: "“Jay Swaminarayan — May Lord Swaminarayan shower eternal peace, devotion, and auspiciousness upon this union.”",
+            groomFirstName: "Hem",
+            brideFirstName: "Aarohi",
+            groomFullName: "Hem Jayesh Master",
+            brideFullName: "Aarohi Dalal",
+            hostFamilyLine: "The Master & Dalal Families",
+            blessingsHeader: "With the divine blessings of Bhagwan Mahavir, Lord Swaminarayan & Our Revered Ancestors",
+            parentsInviteLine: "Mrs. Manisha & Mr. Jayesh Master cordially invite you to the auspicious wedding of",
+            groomLineage: "Grandson of Shri Tarunbhai Master | Son of Mrs. Manisha & Mr. Jayesh Master",
+            brideLineage: "Granddaughter of Shri M.L. Dalal | Daughter of Mrs. Kavita & Mr. Vikram Dalal",
+            groomBio: "Warm-hearted, ambitious, and deeply rooted in Ahimsa and family values, embarking on life's grandest adventure.",
+            brideBio: "Graceful, radiant, and full of devotion and laughter, bringing joy and auspiciousness into our family home.",
+            weddingDateISO: "2026-12-12T19:45",
+            muhuratTimeText: "Shubh Muhurat (Hasta Melap): 07:45 PM IST",
+            venueShort: "The Rambagh Palace Lawns, Jaipur",
+            venueName: "The Grand Rambagh Palace Lawns",
+            venueAddress: "Bhawani Singh Road, Rambagh, Jaipur, Rajasthan 302005, India",
+            baraatNote: "Assemble at Main Palace Gate at 5:30 PM with Royal Dhol & Brass Band.",
+            rsvpContact: "RSVP & Concierge: +91 98765 43210 (Master & Dalal Parivar)",
+            footerHosts: "With Best Compliments From: All Relatives & Friends of the Master & Dalal Parivar",
+            hideCustomizerButton: false,
+            events: [
+                {
+                    title: "Haldi Ceremony (Pithi)",
+                    hindi: "हल्दी एवं पीठी रस्म",
+                    date: "Thursday, 11th Dec 2026 • 10:30 AM",
+                    venue: "Surya Courtyard Poolside",
+                    dressCode: "Sunshine Yellow & Marigold Shades",
+                    description: "An auspicious morning of organic turmeric blessings, folk dholak songs, and marigold flower showers.",
+                    accent: "#E67E22",
+                    icon: "🌼"
+                },
+                {
+                    title: "Mehendi Rasam",
+                    hindi: "मेहंदी उत्सव",
+                    date: "Thursday, 11th Dec 2026 • 04:00 PM",
+                    venue: "Bagh-e-Bahar Garden Lawns",
+                    dressCode: "Emerald Green & Pastel Festive",
+                    description: "Intricate Rajasthani & Gujarati henna artistry, lively folk dances, chaat counters, and colorful festivities.",
+                    accent: "#15803D",
+                    icon: "🌿"
+                },
+                {
+                    title: "Sangeet & Raas Garba",
+                    hindi: "संगीत एवं रास गरबा संध्या",
+                    date: "Thursday, 11th Dec 2026 • 08:00 PM",
+                    venue: "Maharaja Durbar Ballroom",
+                    dressCode: "Royal Indo-Western & Shimmer",
+                    description: "A dazzling evening of choreographed family performances, Raas-Garba, and joyous celebration.",
+                    accent: "#9B1B30",
+                    icon: "🎶"
+                },
+                {
+                    title: "Baraat, Hasta Melap & Shubh Vivah",
+                    hindi: "बारात स्वागत, हस्त मेलाप एवं शुभ फेरे",
+                    date: "Friday, 12th Dec 2026 • 06:00 PM Onwards",
+                    venue: "Royal Mandap, Rambagh Palace Lawns",
+                    dressCode: "Traditional Royal Panetar / Sherwani",
+                    description: "Grand Baraat procession, Varmala under the stars, sacred Hasta Melap, and Mangal Pheras uniting both traditions.",
+                    accent: "#B81D13",
+                    icon: "🔥"
+                },
+                {
+                    title: "Shubh Aashirwad & Reception",
+                    hindi: "स्वागत भोज एवं आशीर्वाद",
+                    date: "Saturday, 13th Dec 2026 • 07:30 PM",
+                    venue: "Crystal Banquet & Royal Lawns",
+                    dressCode: "Regal Silk Sarees & Bandhgalas",
+                    description: "Join us to welcome the newlyweds and celebrate over a pure vegetarian & Jain royal dinner feast.",
+                    accent: "#C59B27",
+                    icon: "👑"
+                },
+                {
+                    title: "Vidaai & Griha Pravesh",
+                    hindi: "विदाई एवं मंगल गृह प्रवेश",
+                    date: "Saturday, 13th Dec 2026 • Auspicious Dawn",
+                    venue: "Family Residence",
+                    dressCode: "Traditional Family Attire",
+                    description: "A tender farewell and a joyous, sacred welcome of the bride into our family home.",
+                    accent: "#D35400",
+                    icon: "🪔"
+                }
+            ]
+        };
+        /*__WEDDING_CONFIG_END__*/
+
+        /* ===================================================================
+         * 1. RENDER CONFIGURATION TO DOM & JHAROKHA TIMELINE CARDS
+         * =================================================================== */
+        function renderWeddingDetails() {
+            // Apply Light Theme Variant
+            document.body.setAttribute('data-theme', WEDDING_CONFIG.themeVariant || 'ivory-crimson');
+
+            // Determine whether Jain is Left (Groom) or Swaminarayan is Left (Groom)
+            const isJainLeft = (WEDDING_CONFIG.traditionOrder || 'jain-swaminarayan') === 'jain-swaminarayan';
+
+            const leftEmblemHref = isJainLeft ? '#jainSacredEmblem' : '#swaminarayanSacredEmblem';
+            const rightEmblemHref = isJainLeft ? '#swaminarayanSacredEmblem' : '#jainSacredEmblem';
+
+            // Update all SVG <use> references for Left & Right emblems
+            const gateLeftUse = document.getElementById('gateLeftSvgUse');
+            const gateRightUse = document.getElementById('gateRightSvgUse');
+            if (gateLeftUse) gateLeftUse.setAttribute('href', leftEmblemHref);
+            if (gateRightUse) gateRightUse.setAttribute('href', rightEmblemHref);
+
+            document.querySelectorAll('.use-left-emblem').forEach(el => el.setAttribute('href', leftEmblemHref));
+            document.querySelectorAll('.use-right-emblem').forEach(el => el.setAttribute('href', rightEmblemHref));
+
+            const targetDate = new Date(WEDDING_CONFIG.weddingDateISO);
+            const isValidDate = !isNaN(targetDate.getTime());
+
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const monthsFull = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+            const monthsTitle = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            const dayName = isValidDate ? daysOfWeek[targetDate.getDay()] : "Friday";
+            const dayNum = isValidDate ? targetDate.getDate() : 12;
+            const suffix = (dayNum % 10 === 1 && dayNum !== 11) ? "st" : (dayNum % 10 === 2 && dayNum !== 12) ? "nd" : (dayNum % 10 === 3 && dayNum !== 13) ? "rd" : "th";
+            const monthUpper = isValidDate ? monthsFull[targetDate.getMonth()] : "DECEMBER";
+            const monthTitle = isValidDate ? monthsTitle[targetDate.getMonth()] : "December";
+            const yearNum = isValidDate ? targetDate.getFullYear() : 2026;
+
+            const computedBindings = {
+                ...WEDDING_CONFIG,
+                leftTraditionTitle: isJainLeft ? "Sacred Jain Tradition" : "Swaminarayan Sampradaya",
+                rightTraditionTitle: isJainLeft ? "Swaminarayan Sampradaya" : "Sacred Jain Tradition",
+                leftDoorMantra: isJainLeft ? WEDDING_CONFIG.jainHeader : WEDDING_CONFIG.swamiHeader,
+                rightDoorMantra: isJainLeft ? WEDDING_CONFIG.swamiHeader : WEDDING_CONFIG.jainHeader,
+                leftShortInvocation: isJainLeft ? WEDDING_CONFIG.jainShortInvocation : WEDDING_CONFIG.swamiShortInvocation,
+                rightShortInvocation: isJainLeft ? WEDDING_CONFIG.swamiShortInvocation : WEDDING_CONFIG.jainShortInvocation,
+                leftHeroPrayer: isJainLeft ? WEDDING_CONFIG.jainHeroPrayer : WEDDING_CONFIG.swamiHeroPrayer,
+                rightHeroPrayer: isJainLeft ? WEDDING_CONFIG.swamiHeroPrayer : WEDDING_CONFIG.jainHeroPrayer,
+                leftFullMantra: isJainLeft ? WEDDING_CONFIG.jainFullMantra : WEDDING_CONFIG.swamiFullMantra,
+                rightFullMantra: isJainLeft ? WEDDING_CONFIG.swamiFullMantra : WEDDING_CONFIG.jainFullMantra,
+                leftMantraMeaning: isJainLeft ? WEDDING_CONFIG.jainMantraMeaning : WEDDING_CONFIG.swamiMantraMeaning,
+                rightMantraMeaning: isJainLeft ? WEDDING_CONFIG.swamiMantraMeaning : WEDDING_CONFIG.jainMantraMeaning,
+                groomTraditionBadge: isJainLeft ? "Hem | The Groom " : "Hem | The Groom ",
+                brideTraditionBadge: isJainLeft ? "Aarohi | The Bride " : "Aarohi | The Bride ",
+                coupleShortTitle: `${WEDDING_CONFIG.groomFirstName} & ${WEDDING_CONFIG.brideFirstName}`,
+                coupleMonogram: `${WEDDING_CONFIG.groomFirstName.charAt(0)} & ${WEDDING_CONFIG.brideFirstName.charAt(0)} | Shubh Vivah`,
+                formattedWeddingDate: `${dayName}, ${dayNum}${suffix} ${monthTitle} ${yearNum}`,
+                weddingDayName: dayName,
+                weddingDateBig: `${String(dayNum).padStart(2, '0')} • ${monthUpper} • ${yearNum}`
+            };
+
+            document.title = `Shubh Vivah | ${WEDDING_CONFIG.groomFirstName} & ${WEDDING_CONFIG.brideFirstName}'s Royal Wedding`;
+
+            document.querySelectorAll('[data-bind]').forEach(el => {
+                const key = el.getAttribute('data-bind');
+                if (computedBindings[key] !== undefined) {
+                    el.textContent = computedBindings[key];
+                }
+            });
+
+            // Update Google Maps Link
+            const mapLink = document.getElementById('venueMapLink');
+            if (mapLink) {
+                mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(WEDDING_CONFIG.venueName + ' ' + WEDDING_CONFIG.venueAddress)}`;
+            }
+
+            // Hide Customizer Button if configured for production GitHub guest view
+            const customizerBtn = document.getElementById('openCustomizerBtn');
+            if (customizerBtn) {
+                customizerBtn.style.display = WEDDING_CONFIG.hideCustomizerButton ? 'none' : 'flex';
+            }
+
+            // Render Manglik Karyakram Events in Ornate Jharokha Ivory & Gold Cards
+            const eventsContainer = document.getElementById('eventsContainer');
+            if (eventsContainer && Array.isArray(WEDDING_CONFIG.events)) {
+                eventsContainer.innerHTML = WEDDING_CONFIG.events.map((ev) => `
+                    <div class="reveal-item visible jharokha-event-card pt-10 px-6 pb-7 sm:px-8 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-2 transition duration-500" style="border-top: 5px solid ${ev.accent}">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="font-hindi font-bold text-xs sm:text-sm px-3.5 py-1 rounded-full bg-blush-100 border border-gold-500/40 text-crimson-800">${ev.hindi}</span>
+                                <span class="text-3xl group-hover:scale-125 transition duration-300">${ev.icon}</span>
+                            </div>
+                            <h3 class="font-cinzel font-bold text-xl sm:text-2xl crimson-gold-text mb-2">${ev.title}</h3>
+                            <p class="text-xs sm:text-sm font-bold text-crimson-800 mb-1 flex items-center gap-2">
+                                <span>🗓️</span> <span>${ev.date}</span>
+                            </p>
+                            <p class="text-xs sm:text-sm font-semibold text-gold-700 mb-4 flex items-center gap-2">
+                                <span>📍</span> <span>${ev.venue}</span>
+                            </p>
+                            <p class="font-cormorant font-medium text-base sm:text-lg text-crimson-950/90 leading-relaxed mb-5">
+                                ${ev.description}
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gold-400/40 flex items-center justify-between text-xs text-crimson-800 font-semibold">
+                            <span>👗 <strong>Dress Code:</strong> ${ev.dressCode}</span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        /* ===================================================================
+         * 2. LIVE ANIMATED COUNTDOWN ENGINE (WITH SVG PROGRESS RINGS & PULSE)
+         * =================================================================== */
+        let prevTimeValues = { d: null, h: null, m: null, s: null };
+
+        function updateWeddingCountdown() {
+            const target = new Date(WEDDING_CONFIG.weddingDateISO).getTime();
+            const now = Date.now();
+            const diff = target - now;
+
+            const circumference = 326.7; // 2 * Math.PI * 52
+
+            const elDays = document.getElementById('cdDays');
+            const elHours = document.getElementById('cdHours');
+            const elMinutes = document.getElementById('cdMinutes');
+            const elSeconds = document.getElementById('cdSeconds');
+
+            const ringDays = document.getElementById('ringDays');
+            const ringHours = document.getElementById('ringHours');
+            const ringMinutes = document.getElementById('ringMinutes');
+            const ringSeconds = document.getElementById('ringSeconds');
+            const statusBanner = document.getElementById('countdownStatusBanner');
+
+            if (isNaN(target) || diff <= 0) {
+                elDays.textContent = "00";
+                elHours.textContent = "00";
+                elMinutes.textContent = "00";
+                elSeconds.textContent = "00";
+                if (statusBanner) {
+                    statusBanner.textContent = `🎉 Shubh Vivah Sampanna! Congratulations to ${WEDDING_CONFIG.groomFirstName} & ${WEDDING_CONFIG.brideFirstName}! 🎉`;
+                }
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            const updateDigitWithPulse = (el, val, key) => {
+                const formatted = String(val).padStart(2, '0');
+                if (prevTimeValues[key] !== formatted) {
+                    el.textContent = formatted;
+                    el.classList.remove('tick-pulse');
+                    void el.offsetWidth;
+                    el.classList.add('tick-pulse');
+                    prevTimeValues[key] = formatted;
+                }
+            };
+
+            updateDigitWithPulse(elDays, days, 'd');
+            updateDigitWithPulse(elHours, hours, 'h');
+            updateDigitWithPulse(elMinutes, minutes, 'm');
+            updateDigitWithPulse(elSeconds, seconds, 's');
+
+            // Update SVG Mandala Progress Rings
+            const daysRatio = Math.min(days / 365, 1);
+            const hoursRatio = hours / 24;
+            const minsRatio = minutes / 60;
+            const secsRatio = seconds / 60;
+
+            ringDays.style.strokeDashoffset = circumference - (daysRatio * circumference);
+            ringHours.style.strokeDashoffset = circumference - (hoursRatio * circumference);
+            ringMinutes.style.strokeDashoffset = circumference - (minsRatio * circumference);
+            ringSeconds.style.strokeDashoffset = circumference - (secsRatio * circumference);
+
+            if (statusBanner) {
+                statusBanner.textContent = `✨ Only ${days} Days & ${hours} Hours left until ${WEDDING_CONFIG.groomFirstName} & ${WEDDING_CONFIG.brideFirstName}'s Shubh Vivah! ✨`;
+            }
+        }
+
+        function celebrateDateAnimation(e) {
+            const stage = document.getElementById('animatedDateStage');
+            if (stage) {
+                stage.classList.remove('tick-pulse');
+                void stage.offsetWidth;
+                stage.classList.add('tick-pulse');
+            }
+            const x = e ? e.clientX : window.innerWidth / 2;
+            const y = e ? e.clientY : window.innerHeight / 2;
+            triggerPetalBurst(x, y, 65);
+            playAuspiciousChime();
+        }
+
+        /* ===================================================================
+         * 3. HTML5 CANVAS MARIGOLD (GENDA PHOOL) & RED ROSE PETALS ON LIGHT BG
+         * =================================================================== */
+        const canvas = document.getElementById('petalCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const PETAL_COLORS = [
+            '#E67E22', // Warm Marigold Orange
+            '#F39C12', // Saffron Marigold
+            '#F1C40F', // Haldi Golden Yellow
+            '#9B1B30', // Sindoor Crimson Rose Petal
+            '#B81D13', // Vermilion Rose Petal
+            '#C59B27'  // Royal Antique Gold Leaf
+        ];
+
+        class PetalParticle {
+            constructor(isBurst = false, startX = null, startY = null) {
+                this.reset(isBurst, startX, startY);
+            }
+
+            reset(isBurst = false, startX = null, startY = null) {
+                this.x = startX !== null ? startX : Math.random() * canvas.width;
+                this.y = startY !== null ? startY : (isBurst ? canvas.height / 2 : Math.random() * -canvas.height);
+                this.size = Math.random() * 8 + 5;
+                this.color = PETAL_COLORS[Math.floor(Math.random() * PETAL_COLORS.length)];
+                this.isSparkle = Math.random() < 0.22;
+                this.vx = isBurst ? (Math.random() - 0.5) * 9 : (Math.random() - 0.5) * 1.1;
+                this.vy = isBurst ? (Math.random() - 0.7) * 9 : Math.random() * 1.3 + 0.65;
+                this.gravity = isBurst ? 0.14 : 0;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spin = (Math.random() - 0.5) * 0.035;
+                this.opacity = Math.random() * 0.45 + 0.35;
+                this.isBurst = isBurst;
+                this.life = isBurst ? 130 : Infinity;
+            }
+
+            update() {
+                this.x += this.vx + Math.sin(this.angle) * 0.4;
+                this.y += this.vy;
+                this.vy += this.gravity;
+                this.angle += this.spin;
+
+                if (this.isBurst) {
+                    this.life--;
+                    this.opacity = Math.max(0, this.life / 130);
+                } else if (this.y > canvas.height + 20) {
+                    this.reset(false, Math.random() * canvas.width, -20);
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle);
+                ctx.globalAlpha = this.opacity;
+
+                if (this.isSparkle) {
+                    ctx.fillStyle = '#C59B27';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size * 0.3, 0, Math.PI * 2);
+                    ctx.fill();
+                } else {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.bezierCurveTo(this.size * 0.6, -this.size * 0.6, this.size * 1.2, 0, 0, this.size);
+                    ctx.bezierCurveTo(-this.size * 1.2, 0, -this.size * 0.6, -this.size * 0.6, 0, 0);
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+        }
+
+        const ambientCount = window.innerWidth < 768 ? 26 : 44;
+        for (let i = 0; i < ambientCount; i++) {
+            const p = new PetalParticle(false);
+            p.y = Math.random() * canvas.height;
+            particles.push(p);
+        }
+
+        function triggerPetalBurst(x, y, count = 55) {
+            for (let i = 0; i < count; i++) {
+                particles.push(new PetalParticle(true, x, y));
+            }
+        }
+
+        function animatePetals() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = particles.length - 1; i >= 0; i--) {
+                particles[i].update();
+                particles[i].draw();
+                if (particles[i].isBurst && particles[i].life <= 0) {
+                    particles.splice(i, 1);
+                }
+            }
+            requestAnimationFrame(animatePetals);
+        }
+
+        /* ===================================================================
+         * 4. WEB AUDIO API SYNTHESIZER (TEMPLE BELL & SANGEET SITAR/CHIME)
+         * =================================================================== */
+        let audioCtx = null;
+        let isMusicPlaying = false;
+        let melodyInterval = null;
+
+        const RAAG_NOTES = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25];
+
+        function initAudio() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function playNote(freq, duration = 1.6, delay = 0, volume = 0.08) {
+            if (!audioCtx) return;
+            setTimeout(() => {
+                try {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                    gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(volume, audioCtx.currentTime + 0.05);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + duration);
+                } catch (e) {}
+            }, delay);
+        }
+
+        function playAuspiciousChime() {
+            initAudio();
+            [261.63, 329.63, 392.00, 523.25, 659.25].forEach((freq, idx) => {
+                playNote(freq, 2.0, idx * 130, 0.09);
+            });
+        }
+
+        function toggleFestiveAudio() {
+            initAudio();
+            const icon = document.getElementById('audioIcon');
+            const label = document.getElementById('audioLabel');
+
+            if (isMusicPlaying) {
+                isMusicPlaying = false;
+                clearInterval(melodyInterval);
+                icon.textContent = '🔇';
+                if (label) label.textContent = 'Music Off';
+            } else {
+                isMusicPlaying = true;
+                icon.textContent = '🔊';
+                if (label) label.textContent = 'Sangeet Playing';
+                playAuspiciousChime();
+                melodyInterval = setInterval(() => {
+                    if (!isMusicPlaying) return;
+                    const n1 = RAAG_NOTES[Math.floor(Math.random() * RAAG_NOTES.length)];
+                    const n2 = RAAG_NOTES[Math.floor(Math.random() * RAAG_NOTES.length)];
+                    playNote(n1, 2.2, 0, 0.05);
+                    playNote(n2, 2.0, 450, 0.04);
+                }, 1400);
+            }
+        }
+
+        /* ===================================================================
+         * 5. ROYAL GATE OPENING CEREMONY
+         * =================================================================== */
+        function openRoyalGate() {
+            const gate = document.getElementById('royalGateOverlay');
+            if (gate) {
+                gate.classList.add('gate-opened');
+            }
+            triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 85);
+            if (!isMusicPlaying) {
+                toggleFestiveAudio();
+            } else {
+                playAuspiciousChime();
+            }
+        }
+
+        /* ===================================================================
+         * 6. LIVE CUSTOMIZER MODAL & ONE-CLICK GITHUB HTML EXPORT
+         * =================================================================== */
+        function toggleCustomizerModal(show) {
+            const modal = document.getElementById('customizerModal');
+            if (!modal) return;
+            if (show) {
+                document.getElementById('cfgThemeVariant').value = WEDDING_CONFIG.themeVariant || 'ivory-crimson';
+                document.getElementById('cfgTraditionOrder').value = WEDDING_CONFIG.traditionOrder || 'jain-swaminarayan';
+                document.getElementById('cfgJainHeader').value = WEDDING_CONFIG.jainHeader || '॥ श्री महावीर स्वामी नमः ॥';
+                document.getElementById('cfgSwamiHeader').value = WEDDING_CONFIG.swamiHeader || '॥ श्री स्वामिनारायणो विजयतेतराम ॥';
+                document.getElementById('cfgJainPrayer').value = WEDDING_CONFIG.jainFullMantra || '';
+                document.getElementById('cfgSwamiPrayer').value = WEDDING_CONFIG.swamiFullMantra || '';
+                document.getElementById('cfgGroomFirst').value = WEDDING_CONFIG.groomFirstName;
+                document.getElementById('cfgBrideFirst').value = WEDDING_CONFIG.brideFirstName;
+                document.getElementById('cfgGroomFull').value = WEDDING_CONFIG.groomFullName;
+                document.getElementById('cfgBrideFull').value = WEDDING_CONFIG.brideFullName;
+                document.getElementById('cfgWeddingISO').value = WEDDING_CONFIG.weddingDateISO;
+                document.getElementById('cfgMuhuratText').value = WEDDING_CONFIG.muhuratTimeText;
+                document.getElementById('cfgGroomLineage').value = WEDDING_CONFIG.groomLineage;
+                document.getElementById('cfgBrideLineage').value = WEDDING_CONFIG.brideLineage;
+                document.getElementById('cfgVenueName').value = WEDDING_CONFIG.venueName;
+                document.getElementById('cfgVenueAddress').value = WEDDING_CONFIG.venueAddress;
+                document.getElementById('cfgParentsInvite').value = WEDDING_CONFIG.parentsInviteLine;
+                document.getElementById('cfgHideCustomizerOnExport').checked = !!WEDDING_CONFIG.hideCustomizerButton;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function SyncFormToConfig() {
+            WEDDING_CONFIG.themeVariant = document.getElementById('cfgThemeVariant').value || "ivory-crimson";
+            WEDDING_CONFIG.traditionOrder = document.getElementById('cfgTraditionOrder').value || "jain-swaminarayan";
+            WEDDING_CONFIG.jainHeader = document.getElementById('cfgJainHeader').value.trim() || "॥ श्री महावीर स्वामी नमः ॥";
+            WEDDING_CONFIG.swamiHeader = document.getElementById('cfgSwamiHeader').value.trim() || "॥ श्री स्वामिनारायणो विजयतेतराम ॥";
+            WEDDING_CONFIG.jainFullMantra = document.getElementById('cfgJainPrayer').value.trim();
+            WEDDING_CONFIG.swamiFullMantra = document.getElementById('cfgSwamiPrayer').value.trim();
+            WEDDING_CONFIG.groomFirstName = document.getElementById('cfgGroomFirst').value.trim() || "Hem";
+            WEDDING_CONFIG.brideFirstName = document.getElementById('cfgBrideFirst').value.trim() || "Aarohi";
+            WEDDING_CONFIG.groomFullName = document.getElementById('cfgGroomFull').value.trim();
+            WEDDING_CONFIG.brideFullName = document.getElementById('cfgBrideFull').value.trim();
+            WEDDING_CONFIG.weddingDateISO = document.getElementById('cfgWeddingISO').value;
+            WEDDING_CONFIG.muhuratTimeText = document.getElementById('cfgMuhuratText').value.trim();
+            WEDDING_CONFIG.groomLineage = document.getElementById('cfgGroomLineage').value.trim();
+            WEDDING_CONFIG.brideLineage = document.getElementById('cfgBrideLineage').value.trim();
+            WEDDING_CONFIG.venueName = document.getElementById('cfgVenueName').value.trim();
+            WEDDING_CONFIG.venueShort = WEDDING_CONFIG.venueName;
+            WEDDING_CONFIG.venueAddress = document.getElementById('cfgVenueAddress').value.trim();
+            WEDDING_CONFIG.parentsInviteLine = document.getElementById('cfgParentsInvite').value.trim();
+            WEDDING_CONFIG.hideCustomizerButton = document.getElementById('cfgHideCustomizerOnExport').checked;
+        }
+
+        function applyCustomization(e) {
+            e.preventDefault();
+            SyncFormToConfig();
+            renderWeddingDetails();
+            updateWeddingCountdown();
+            toggleCustomizerModal(false);
+            celebrateDateAnimation();
+            document.getElementById('muhurat').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function downloadUpdatedHTMLForGitHub() {
+            SyncFormToConfig();
+            renderWeddingDetails();
+            updateWeddingCountdown();
+
+            let fullSource = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            const replacementBlock = `/*__WEDDING_CONFIG_START__*/\n        let WEDDING_CONFIG = ${JSON.stringify(WEDDING_CONFIG, null, 12)};\n        /*__WEDDING_CONFIG_END__*/`;
+
+            fullSource = fullSource.replace(
+                /\/\*__WEDDING_CONFIG_START__\*\/[\s\S]*?\/\*__WEDDING_CONFIG_END__\*\//,
+                replacementBlock
+            );
+
+            const blob = new Blob([fullSource], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'index.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 70);
+        }
+
+        /* ===================================================================
+         * 7. GOOGLE CALENDAR HELPER
+         * =================================================================== */
+        function openGoogleCalendar() {
+            const start = new Date(WEDDING_CONFIG.weddingDateISO);
+            const end = new Date(start.getTime() + 5 * 60 * 60 * 1000);
+            const fmt = (d) => d.toISOString().replace(/-|:|\.\d+/g, '');
+            const title = encodeURIComponent(`Shubh Vivah: ${WEDDING_CONFIG.groomFirstName} weds ${WEDDING_CONFIG.brideFirstName}`);
+            const details = encodeURIComponent(`${WEDDING_CONFIG.parentsInviteLine} ${WEDDING_CONFIG.groomFullName} & ${WEDDING_CONFIG.brideFullName}. ${WEDDING_CONFIG.muhuratTimeText}`);
+            const location = encodeURIComponent(`${WEDDING_CONFIG.venueName}, ${WEDDING_CONFIG.venueAddress}`);
+            window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${fmt(start)}/${fmt(end)}&details=${details}&location=${location}`, '_blank');
+        }
+
+        /* ===================================================================
+         * 8. LIVE AASHIRWAD & RSVP BLESSINGS WALL (LIGHT IVORY CARDS)
+         * =================================================================== */
+        const DEFAULT_BLESSINGS = [
+            
+        ];
+
+        let blessingsData = [];
+        try {
+            const saved = localStorage.getItem('shubh_vivah_blessings');
+            blessingsData = saved ? JSON.parse(saved) : DEFAULT_BLESSINGS;
+        } catch (e) {
+            blessingsData = DEFAULT_BLESSINGS;
+        }
+
+        function renderBlessingsWall() {
+            const list = document.getElementById('blessingsWallList');
+            const counter = document.getElementById('blessingCounter');
+            if (!list) return;
+
+            counter.textContent = `${blessingsData.length} Blessings`;
+            list.innerHTML = blessingsData.map(b => `
+                <div class="p-5 rounded-2xl ivory-card flex flex-col justify-between space-y-3">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <h4 class="font-cinzel font-bold text-crimson-800 text-sm sm:text-base">${b.name}</h4>
+                            <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-blush-100 text-crimson-700 border border-gold-500/40">${b.attendance}</span>
+                        </div>
+                        <p class="font-cormorant font-medium italic text-base sm:text-lg text-crimson-950 leading-relaxed">“${b.message}”</p>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] font-semibold text-gold-700 pt-2 border-t border-gold-400/30">
+                        <span>👥 ${b.guests}</span>
+                        <span>🪔 ${b.time}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function submitBlessingRSVP(e) {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            const attendance = document.getElementById('guestAttendance').value;
+            const guests = document.getElementById('guestCount').value;
+            const message = document.getElementById('guestMessage').value.trim();
+
+            if (!name || !message) return;
+
+            const newEntry = {
+                name,
+                attendance,
+                guests,
+                message,
+                time: "Just Now ✨"
+            };
+
+            blessingsData.unshift(newEntry);
+            try {
+                localStorage.setItem('shubh_vivah_blessings', JSON.stringify(blessingsData));
+            } catch (err) {}
+
+            renderBlessingsWall();
+            document.getElementById('rsvpForm').reset();
+            triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 75);
+            playAuspiciousChime();
+        }
+
+        /* ===================================================================
+         * 9. TV DISPLAY MODE (FULLSCREEN + SMOOTH AUTO-SCROLL FOR SMART TVs)
+         * =================================================================== */
+        let isTVModeActive = false;
+        let tvScrollDirection = 1;
+        let tvScrollRAF = null;
+
+        function toggleTVDisplayMode() {
+            isTVModeActive = !isTVModeActive;
+            const label = document.getElementById('tvModeLabel');
+            document.body.classList.toggle('tv-display-mode', isTVModeActive);
+
+            if (isTVModeActive) {
+                if (label) label.textContent = 'Exit TV Mode';
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen().catch(() => {});
+                }
+                startTVAutoScroll();
+            } else {
+                if (label) label.textContent = 'TV Mode';
+                if (document.fullscreenElement && document.exitFullscreen) {
+                    document.exitFullscreen().catch(() => {});
+                }
+                cancelAnimationFrame(tvScrollRAF);
+            }
+        }
+
+        function startTVAutoScroll() {
+            function step() {
+                if (!isTVModeActive) return;
+                window.scrollBy(0, tvScrollDirection * 0.9);
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                if (window.scrollY >= maxScroll - 2) {
+                    tvScrollDirection = -1;
+                } else if (window.scrollY <= 2) {
+                    tvScrollDirection = 1;
+                }
+                tvScrollRAF = requestAnimationFrame(step);
+            }
+            tvScrollRAF = requestAnimationFrame(step);
+        }
+
+        /* ===================================================================
+         * 10. INTERSECTION OBSERVER & INITIALIZATION ON LOAD
+         * =================================================================== */
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal-item').forEach(el => observer.observe(el));
+        }
+
+        window.onload = function () {
+            renderWeddingDetails();
+            updateWeddingCountdown();
+            setInterval(updateWeddingCountdown, 1000);
+            renderBlessingsWall();
+            initScrollReveal();
+            animatePetals();
+        };
+    </script>
+</body>
+</html>
