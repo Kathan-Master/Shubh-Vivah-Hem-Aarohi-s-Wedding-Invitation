@@ -1121,76 +1121,78 @@
         </div>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- 10. AASHIRWAD & RSVP BLESSINGS WALL                                   -->
-    <!-- ===================================================================== -->
-    <section id="rsvp" class="relative py-20 sm:py-28 px-4 sm:px-8 border-t border-gold-400/35 bg-ivory-100/80">
-        <div class="max-w-7xl mx-auto">
-            <div class="reveal-item text-center mb-14">
-                <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| शुभ आशीर्वाद एवं उपस्थिति ||</p>
-                <h2 class="section-heading font-cinzel font-black crimson-gold-text">Send Your Aashirwad & RSVP</h2>
-                <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
-                    Confirm your attendance and shower the newlyweds with your heartfelt blessings.
-                </p>
-            </div>
+<!-- ===================================================================== -->
+<!-- 10. AASHIRWAD & RSVP BLESSINGS WALL                                   -->
+<!-- ===================================================================== -->
+<section id="rsvp" class="relative py-20 sm:py-28 px-4 sm:px-8 border-t border-gold-400/35 bg-ivory-100/80">
+    <div class="max-w-7xl mx-auto">
+        <div class="reveal-item text-center mb-14">
+            <p class="font-hindi text-crimson-700 font-bold text-lg sm:text-xl mb-1">|| शुभ आशीर्वाद एवं उपस्थिति ||</p>
+            <h2 class="section-heading font-cinzel font-black crimson-gold-text">Send Your Aashirwad & RSVP</h2>
+            <p class="font-cormorant italic text-xl sm:text-2xl text-crimson-900/85 max-w-2xl mx-auto mt-2 font-medium">
+                Confirm your attendance and shower the newlyweds with your heartfelt blessings.
+            </p>
+        </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
-                <!-- RSVP & Blessing Submission Form -->
-                <div class="reveal-item lg:col-span-5 rounded-3xl ivory-card-bright p-6 sm:p-8">
-                    <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-800 mb-6 flex items-center gap-2">
-                        <span>🪷</span> Confirm Attendance & Blessing
-                    </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
+            <!-- RSVP & Blessing Submission Form -->
+            <div class="reveal-item lg:col-span-5 rounded-3xl ivory-card-bright p-6 sm:p-8 shadow-sm">
+                <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-800 mb-6 flex items-center gap-2">
+                    <span>🪷</span> Confirm Attendance & Blessing
+                </h3>
 
-                    <form id="rsvpForm" onsubmit="submitBlessingRSVP(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Your Full Name / Family Name *</label>
-                            <input type="text" id="guestName" required placeholder="e.g., Mr. & Mrs. Kapil Malhotra" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 placeholder-crimson-900/40 focus:outline-none focus:border-crimson-700 text-sm font-medium">
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Will You Attend? *</label>
-                                <select id="guestAttendance" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 focus:outline-none focus:border-crimson-700 text-sm font-medium">
-                                    <option value="Joyfully Attending ✨">Joyfully Attending ✨</option>
-                                    <option value="Sending Warm Blessings from Afar 🙏">Blessings from Afar 🙏</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Number of Guests</label>
-                                <select id="guestCount" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 focus:outline-none focus:border-crimson-700 text-sm font-medium">
-                                    <option value="1 Guest">1 Guest</option>
-                                    <option value="2 Guests (Couple)" selected>2 Guests (Couple)</option>
-                                    <option value="3 Guests">3 Guests</option>
-                                    <option value="4+ Guests (Full Family)">4+ Guests (Full Family)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Your Aashirwad / Message for the Couple *</label>
-                            <textarea id="guestMessage" required rows="3" placeholder="Write your blessings for the bride and groom..." class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 placeholder-crimson-900/40 focus:outline-none focus:border-crimson-700 text-sm font-medium"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-4 rounded-full crimson-btn font-cinzel font-bold text-sm uppercase tracking-wider hover:scale-[1.02] active:scale-95 transition cursor-pointer">
-                            🌺 Shower Petals & Post Aashirwad
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Live Aashirwad & Blessings Wall -->
-                <div class="reveal-item lg:col-span-7 space-y-4">
-                    <div class="flex items-center justify-between border-b border-gold-500/40 pb-3">
-                        <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-800">💐 Live Family Blessings Wall</h3>
-                        <span id="blessingCounter" class="text-xs font-bold px-3 py-1 rounded-full bg-crimson-700/10 text-crimson-700 border border-crimson-700/30">4 Blessings</span>
+                <form id="rsvpForm" onsubmit="submitBlessingRSVP(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Your Full Name / Family Name *</label>
+                        <input type="text" id="guestName" required placeholder="e.g., Mr. & Mrs. Rajesh Shah" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 placeholder-crimson-900/40 focus:outline-none focus:border-crimson-700 text-sm font-medium">
                     </div>
 
-                    <div id="blessingsWallList" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[520px] overflow-y-auto pr-1">
-                        <!-- Dynamically populated from localStorage & default blessings -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Will You Attend? *</label>
+                            <select id="guestAttendance" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 focus:outline-none focus:border-crimson-700 text-sm font-medium">
+                                <option value="Joyfully Attending ✨">Joyfully Attending ✨</option>
+                                <option value="Blessings from Afar 🙏">Blessings from Afar 🙏</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Number of Guests</label>
+                            <select id="guestCount" class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 focus:outline-none focus:border-crimson-700 text-sm font-medium">
+                                <option value="1 Guest">1 Guest</option>
+                                <option value="2 Guests (Couple)" selected>2 Guests (Couple)</option>
+                                <option value="3 Guests">3 Guests</option>
+                                <option value="4+ Guests (Full Family)">4+ Guests (Full Family)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1.5">Your Aashirwad / Message for the Couple *</label>
+                        <textarea id="guestMessage" required rows="3" placeholder="Write your heartfelt blessings for the bride and groom..." class="w-full px-4 py-3 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 placeholder-crimson-900/40 focus:outline-none focus:border-crimson-700 text-sm font-medium resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBlessingBtn" class="w-full py-4 rounded-full crimson-btn font-cinzel font-bold text-sm uppercase tracking-wider hover:scale-[1.02] active:scale-95 transition cursor-pointer">
+                        🌺 Shower Petals & Post Aashirwad
+                    </button>
+                </form>
+            </div>
+
+            <!-- Live Aashirwad & Blessings Wall -->
+            <div class="reveal-item lg:col-span-7 space-y-4">
+                <div class="flex items-center justify-between border-b border-gold-500/40 pb-3">
+                    <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-crimson-800">💐 Live Family Blessings Wall</h3>
+                    <span id="blessingCounter" class="text-xs font-bold px-3 py-1 rounded-full bg-crimson-700/10 text-crimson-700 border border-crimson-700/30">Connecting...</span>
+                </div>
+
+                <div id="blessingsWallList" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[520px] overflow-y-auto pr-1">
+                    <div class="col-span-full text-center py-10 text-crimson-900/60 italic text-sm">
+                        Loading auspicious blessings...
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ===================================================================== -->
     <!-- 11. ROYAL LIGHT FOOTER WITH BAL MANUHAR (KIDS' CUTE INVITATION)       -->
@@ -1211,153 +1213,9 @@
             </p>
         </div>
     </footer>
-
+          
     <!-- ===================================================================== -->
-    <!-- 12. LIVE CUSTOMIZER MODAL (EDIT NAME, DATE, LIGHT THEME & EXPORT)     -->
-    <!-- ===================================================================== -->
-    <div id="customizerModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-crimson-950/60 backdrop-blur-md">
-        <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl ivory-card-bright p-6 sm:p-8 text-crimson-950 shadow-2xl">
-            <div class="flex items-center justify-between border-b border-gold-400/50 pb-4 mb-6">
-                <div>
-                    <h3 class="font-cinzel font-bold text-xl sm:text-2xl crimson-gold-text">✏️ Customize Wedding Names, Date & Theme</h3>
-                    <p class="text-xs text-crimson-800 font-medium mt-0.5">Edit your brother's details below. Changes animate immediately & can be downloaded as a ready-to-host GitHub `index.html` file!</p>
-                </div>
-                <button onclick="toggleCustomizerModal(false)" class="w-9 h-9 rounded-full bg-blush-100 border border-crimson-700/40 text-crimson-800 hover:bg-crimson-700 hover:text-white transition flex items-center justify-center font-bold cursor-pointer">✕</button>
-            </div>
-
-            <form id="customizerForm" onsubmit="applyCustomization(event)" class="space-y-4 text-left">
-                <!-- Light Theme Variation Selector -->
-                <div>
-                    <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">🎨 Select Light Royal Theme Variation</label>
-                    <select id="cfgThemeVariant" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-semibold text-sm">
-                        <option value="ivory-crimson">1. Warm Ivory & Sindoor Crimson (Classic Royal)</option>
-                        <option value="peach-gold">2. Pastel Peach & Antique Gold (Soft Blush)</option>
-                        <option value="cream-marigold">3. Royal Cream & Marigold (Festive Haldi/Genda)</option>
-                    </select>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's First Name (Brother)</label>
-                        <input type="text" id="cfgGroomFirst" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Bride's First Name (Bhabhi)</label>
-                        <input type="text" id="cfgBrideFirst" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's Full Name</label>
-                        <input type="text" id="cfgGroomFull" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Bride's Full Name</label>
-                        <input type="text" id="cfgBrideFull" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Wedding Date & Muhurat Time (Countdown Target)</label>
-                        <input type="datetime-local" id="cfgWeddingISO" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Muhurat Display Note</label>
-                        <input type="text" id="cfgMuhuratText" required class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's Parents & Grandparents Line</label>
-                        <input type="text" id="cfgGroomLineage" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Bride's Parents & Grandparents Line</label>
-                        <input type="text" id="cfgBrideLineage" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Royal Venue Name</label>
-                        <input type="text" id="cfgVenueName" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Venue Full Address & City</label>
-                        <input type="text" id="cfgVenueAddress" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Parents' Main Invitation Header</label>
-                    <input type="text" id="cfgParentsInvite" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-sm">
-                </div>
-
-                <div class="flex items-center gap-2 pt-2">
-                    <input type="checkbox" id="cfgHideCustomizerOnExport" class="w-4 h-4 accent-crimson-700">
-                    <label for="cfgHideCustomizerOnExport" class="text-xs text-crimson-900 font-semibold">Hide the "✏️ Customize Name & Date" button in the downloaded file (recommended when sharing with guests on GitHub)</label>
-                </div>
-
-                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gold-400/50">
-                    <button type="submit" class="px-6 py-3 rounded-full crimson-btn font-cinzel font-bold text-xs sm:text-sm uppercase tracking-wider hover:scale-105 transition cursor-pointer">
-                        ✨ Apply & Animate Countdown Now
-                    </button>
-                </div>
-            </div>
-
-            <form id="customizerForm" onsubmit="applyCustomization(event)" class="space-y-4 text-left">
-                <!-- Light Theme Variation & Tradition Alignment Selector -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">🎨 Light Royal Theme Variation</label>
-                        <select id="cfgThemeVariant" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-semibold text-sm">
-                            <option value="ivory-crimson">1. Warm Ivory & Sindoor Crimson</option>
-                            <option value="peach-gold">2. Pastel Peach & Antique Gold</option>
-                            <option value="cream-marigold">3. Royal Cream & Marigold</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">🪷 Groom & Bride Tradition Order</label>
-                        <select id="cfgTraditionOrder" class="w-full px-3.5 py-2.5 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-semibold text-sm">
-                            <option value="jain-swaminarayan">Groom: Jain | Bride: Swaminarayan</option>
-                            <option value="swaminarayan-jain">Groom: Swaminarayan | Bride: Jain</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Sacred Jain & Swaminarayan Mantra Customization -->
-                <div class="p-4 rounded-2xl bg-ivory-100 border border-gold-400/60 space-y-3">
-                    <p class="text-xs font-bold uppercase tracking-wider text-crimson-700">🙏 Sacred Jain & Swaminarayan Invocations</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Jain Invocation Header</label>
-                            <input type="text" id="cfgJainHeader" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs">
-                        </div>
-                        <div>
-                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Swaminarayan Invocation Header</label>
-                            <input type="text" id="cfgSwamiHeader" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Jain Prayer / Namokar Mantra</label>
-                            <textarea id="cfgJainPrayer" rows="2" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs"></textarea>
-                        </div>
-                        <div>
-                            <label class="block text-[11px] uppercase tracking-wider text-crimson-800 font-bold mb-1">Swaminarayan Prayer / Shloka</label>
-                            <textarea id="cfgSwamiPrayer" rows="2" class="w-full px-3 py-2 rounded-xl bg-ivory-50 border border-gold-500/60 text-crimson-950 font-medium text-xs"></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-crimson-800 font-bold mb-1">Groom's First Name (Brother)</label>
-    <!-- ===================================================================== -->
-    <!-- 13. JAVASCRIPT CONFIGURATION, ANIMATIONS, COUNTDOWN & AUDIO ENGINE    -->
+    <!-- 11. JAVASCRIPT CONFIGURATION, ANIMATIONS, COUNTDOWN & AUDIO ENGINE    -->
     <!-- ===================================================================== -->
     <script>
         /* ===================================================================
@@ -2085,6 +1943,126 @@
             initScrollReveal();
             animatePetals();
         };
+        
     </script>
+    <!-- Firebase SDK (Firestore) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { 
+            getFirestore, 
+            collection, 
+            addDoc, 
+            query, 
+            orderBy, 
+            onSnapshot, 
+            serverTimestamp 
+        } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // Replace with your Firebase project credentials
+        const firebaseConfig = {
+            apiKey: "AIzaSyBrzwrG6Chnamp5oXoQJVl_coIgTdjAPrY",
+            authDomain: "wedding-invitation-d5710.firebaseapp.com",
+            projectId: "wedding-invitation-d5710",
+            storageBucket: "wedding-invitation-d5710.firebasestorage.app",
+            messagingSenderId: "758522513337",
+            appId: "1:758522513337:web:a967f49cf4dad533b6d868"
+          };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const rsvpCol = collection(db, "wedding_blessings");
+
+        // Handle Form Submission
+        window.submitBlessingRSVP = async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById("submitBlessingBtn");
+            const name = document.getElementById("guestName").value.trim();
+            const attendance = document.getElementById("guestAttendance").value;
+            const count = document.getElementById("guestCount").value;
+            const message = document.getElementById("guestMessage").value.trim();
+
+            if (!name || !message) return;
+
+            btn.disabled = true;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "🌸 Posting Auspicious Blessing...";
+
+            try {
+            await addDoc(rsvpCol, {
+                name,
+                attendance,
+                count,
+                message,
+                createdAt: serverTimestamp()
+            });
+
+            // Reset form
+            document.getElementById("rsvpForm").reset();
+
+            // Trigger flower petal animation if the function exists
+            if (typeof triggerFlowerPetals === "function") {
+                triggerFlowerPetals();
+            }
+            } catch (err) {
+            alert("Unable to send blessing right now. Please check your internet connection.");
+            console.error(err);
+            } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            }
+        };
+
+        // Real-time listener for the live wall
+        const q = query(rsvpCol, orderBy("createdAt", "desc"));
+        onSnapshot(q, (snapshot) => {
+            const list = document.getElementById("blessingsWallList");
+            const counter = document.getElementById("blessingCounter");
+            if (!list) return;
+
+            counter.innerText = `${snapshot.size} Blessing${snapshot.size === 1 ? '' : 's'}`;
+
+            if (snapshot.empty) {
+            list.innerHTML = `
+                <div class="col-span-full text-center py-10 text-crimson-900/60 italic text-sm">
+                Be the first family member to shower the couple with your auspicious blessings!
+                </div>`;
+            return;
+            }
+
+            let itemsHtml = "";
+            snapshot.forEach((doc) => {
+            const data = doc.data();
+            const dateStr = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString('en-IN', {
+                day: 'numeric', month: 'short'
+            }) : 'Just now';
+
+            itemsHtml += `
+                <div class="p-4 rounded-2xl bg-ivory-50/90 border border-gold-500/40 shadow-sm flex flex-col justify-between hover:border-gold-500 transition">
+                <div>
+                    <div class="flex items-center justify-between gap-2 mb-1.5">
+                    <h4 class="font-cinzel font-bold text-crimson-900 text-sm truncate flex items-center gap-1.5">
+                        <span>🪷</span> ${escapeHtml(data.name)}
+                    </h4>
+                    <span class="text-[11px] text-crimson-900/60 shrink-0 font-medium">${dateStr}</span>
+                    </div>
+                    <p class="font-cormorant italic text-crimson-950 text-base leading-snug mb-3">"${escapeHtml(data.message)}"</p>
+                </div>
+                <div class="flex items-center justify-between text-[11px] pt-2 border-t border-gold-400/20 text-gold-700 font-semibold">
+                    <span>${escapeHtml(data.attendance)}</span>
+                    <span>${escapeHtml(data.count)}</span>
+                </div>
+                </div>
+            `;
+            });
+
+            list.innerHTML = itemsHtml;
+        });
+
+        function escapeHtml(str) {
+            return (str || '').replace(/[&<>'"]/g, 
+            tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+        </script>
 </body>
 </html>
