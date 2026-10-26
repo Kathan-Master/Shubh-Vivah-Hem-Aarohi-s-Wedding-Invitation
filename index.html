@@ -1945,140 +1945,147 @@
     </script>
 
     <!-- Unified Firebase SDK & Live Real-Time Wall -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { 
-            getFirestore, 
-            collection, 
-            addDoc, 
-            query, 
-            orderBy, 
-            onSnapshot, 
-            serverTimestamp 
-        } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    <!-- Robust Real-Time Firebase Listener & Submitter -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { 
+        getFirestore, 
+        collection, 
+        addDoc, 
+        onSnapshot 
+    } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBrzwrG6Chnamp5oXoQJVl_coIgTdjAPrY",
-            authDomain: "wedding-invitation-d5710.firebaseapp.com",
-            projectId: "wedding-invitation-d5710",
-            storageBucket: "wedding-invitation-d5710.firebasestorage.app",
-            messagingSenderId: "758522513337",
-            appId: "1:758522513337:web:a967f49cf4dad533b6d868"
-        };
+    const firebaseConfig = {
+        apiKey: "AIzaSyBrzwrG6Chnamp5oXoQJVl_coIgTdjAPrY",
+        authDomain: "wedding-invitation-d5710.firebaseapp.com",
+        projectId: "wedding-invitation-d5710",
+        storageBucket: "wedding-invitation-d5710.firebasestorage.app",
+        messagingSenderId: "758522513337",
+        appId: "1:758522513337:web:a967f49cf4dad533b6d868"
+    };
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const rsvpCol = collection(db, "wedding_blessings");
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const rsvpCol = collection(db, "wedding_blessings");
 
-        function escapeHtml(str) {
-            return (str || '').replace(/[&<>'"]/g, 
-                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-            );
+    function escapeHtml(str) {
+        return (str || '').replace(/[&<>'"]/g, 
+            tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+        );
+    }
+
+    // 1. Live Real-time Listener (No orderBy filter trap; sorts newest-first in memory)
+    onSnapshot(rsvpCol, (snapshot) => {
+        const list = document.getElementById("blessingsWallList");
+        const counter = document.getElementById("blessingCounter");
+        if (!list) return;
+
+        if (counter) {
+            counter.innerText = `${snapshot.size} Blessing${snapshot.size === 1 ? '' : 's'}`;
         }
 
-        // Attach submission directly to the form element to avoid race conditions
-        const rsvpForm = document.getElementById("rsvpForm");
-        if (rsvpForm) {
-            rsvpForm.onsubmit = async function(e) {
-                e.preventDefault();
-                const btn = document.getElementById("submitBlessingBtn");
-                const nameInput = document.getElementById("guestName");
-                const attendanceInput = document.getElementById("guestAttendance");
-                const countInput = document.getElementById("guestCount");
-                const messageInput = document.getElementById("guestMessage");
-
-                const name = nameInput.value.trim();
-                const attendance = attendanceInput.value;
-                const count = countInput.value;
-                const message = messageInput.value.trim();
-
-                if (!name || !message) return;
-
-                btn.disabled = true;
-                const originalText = btn.innerHTML;
-                btn.innerHTML = "🌸 Posting Auspicious Blessing...";
-
-                try {
-                    await addDoc(rsvpCol, {
-                        name: name,
-                        attendance: attendance,
-                        count: count,
-                        message: message,
-                        createdAt: serverTimestamp()
-                    });
-
-                    rsvpForm.reset();
-
-                    // Correct function call from your canvas engine
-                    if (typeof triggerPetalBurst === "function") {
-                        triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 80);
-                    }
-                    if (typeof playAuspiciousChime === "function") {
-                        playAuspiciousChime();
-                    }
-                } catch (err) {
-                    console.error("Firestore Error:", err);
-                    alert("Unable to post your blessing. Please ensure Firestore Rules are published to allow read/write in Firebase Console.");
-                } finally {
-                    btn.disabled = false;
-                    btn.innerHTML = originalText;
-                }
-            };
+        if (snapshot.empty) {
+            list.innerHTML = `
+                <div class="col-span-full text-center py-10 text-crimson-900/60 italic text-sm">
+                    Be the first family member to shower the couple with your auspicious blessings!
+                </div>`;
+            return;
         }
 
-        // Real-time listener for the live wall
-        const q = query(rsvpCol, orderBy("createdAt", "desc"));
-        onSnapshot(q, (snapshot) => {
-            const list = document.getElementById("blessingsWallList");
-            const counter = document.getElementById("blessingCounter");
-            if (!list) return;
-
-            if (counter) {
-                counter.innerText = `${snapshot.size} Blessing${snapshot.size === 1 ? '' : 's'}`;
-            }
-
-            if (snapshot.empty) {
-                list.innerHTML = `
-                    <div class="col-span-full text-center py-10 text-crimson-900/60 italic text-sm">
-                        Be the first family member to shower the couple with your auspicious blessings!
-                    </div>`;
-                return;
-            }
-
-            let itemsHtml = "";
-            snapshot.forEach((doc) => {
-                const data = doc.data();
-                const dateStr = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString('en-IN', {
-                    day: 'numeric', month: 'short', year: 'numeric'
-                }) : 'Just now';
-
-                itemsHtml += `
-                    <div class="p-4 rounded-2xl bg-ivory-50/90 border border-gold-500/40 shadow-sm flex flex-col justify-between hover:border-gold-500 transition">
-                        <div>
-                            <div class="flex items-center justify-between gap-2 mb-1.5">
-                                <h4 class="font-cinzel font-bold text-crimson-900 text-sm truncate flex items-center gap-1.5">
-                                    <span>🪷</span> ${escapeHtml(data.name)}
-                                </h4>
-                                <span class="text-[11px] text-crimson-900/60 shrink-0 font-medium">${dateStr}</span>
-                            </div>
-                            <p class="font-cormorant italic text-crimson-950 text-base leading-snug mb-3">"${escapeHtml(data.message)}"</p>
-                        </div>
-                        <div class="flex items-center justify-between text-[11px] pt-2 border-t border-gold-400/20 text-gold-700 font-semibold">
-                            <span>${escapeHtml(data.attendance)}</span>
-                            <span>👥 ${escapeHtml(data.count)}</span>
-                        </div>
-                    </div>
-                `;
-            });
-
-            list.innerHTML = itemsHtml;
-        }, (error) => {
-            console.error("Firebase Snapshot Listener Error:", error);
-            const list = document.getElementById("blessingsWallList");
-            if (list) {
-                list.innerHTML = `<div class="col-span-full text-center py-8 text-crimson-700 text-xs">Error connecting to live blessings. Please check Firestore security rules.</div>`;
-            }
+        // Convert docs to array and sort by time (newest first)
+        const items = [];
+        snapshot.forEach((doc) => {
+            const data = doc.data();
+            items.push(data);
         });
-    </script>
+
+        items.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+
+        let itemsHtml = "";
+        items.forEach((data) => {
+            const dateStr = data.createdAt ? new Date(data.createdAt).toLocaleDateString('en-IN', {
+                day: 'numeric', month: 'short', year: 'numeric'
+            }) : 'Just now';
+
+            itemsHtml += `
+                <div class="p-4 rounded-2xl bg-ivory-50/90 border border-gold-500/40 shadow-sm flex flex-col justify-between hover:border-gold-500 transition">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-1.5">
+                            <h4 class="font-cinzel font-bold text-crimson-900 text-sm truncate flex items-center gap-1.5">
+                                <span>🪷</span> ${escapeHtml(data.name)}
+                            </h4>
+                            <span class="text-[11px] text-crimson-900/60 shrink-0 font-medium">${dateStr}</span>
+                        </div>
+                        <p class="font-cormorant italic text-crimson-950 text-base leading-snug mb-3">"${escapeHtml(data.message)}"</p>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] pt-2 border-t border-gold-400/20 text-gold-700 font-semibold">
+                        <span>${escapeHtml(data.attendance)}</span>
+                        <span>👥 ${escapeHtml(data.count)}</span>
+                    </div>
+                </div>
+            `;
+        });
+
+        list.innerHTML = itemsHtml;
+    }, (error) => {
+        console.error("Firestore Error:", error);
+        const list = document.getElementById("blessingsWallList");
+        if (list) {
+            list.innerHTML = `
+                <div class="col-span-full text-center py-8 text-crimson-700 text-xs font-semibold">
+                    Connection Error: ${error.message}. Please check your Firestore rules in Firebase Console.
+                </div>`;
+        }
+    });
+
+    // 2. Form Submission Handler
+    const form = document.getElementById("rsvpForm");
+    if (form) {
+        form.onsubmit = async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById("submitBlessingBtn");
+            const nameInput = document.getElementById("guestName");
+            const attendanceInput = document.getElementById("guestAttendance");
+            const countInput = document.getElementById("guestCount");
+            const messageInput = document.getElementById("guestMessage");
+
+            const name = nameInput.value.trim();
+            const attendance = attendanceInput.value;
+            const count = countInput.value;
+            const message = messageInput.value.trim();
+
+            if (!name || !message) return;
+
+            btn.disabled = true;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "🌸 Posting Auspicious Blessing...";
+
+            try {
+                await addDoc(rsvpCol, {
+                    name: name,
+                    attendance: attendance,
+                    count: count,
+                    message: message,
+                    createdAt: Date.now() // Standard millisecond timestamp for instant sorting
+                });
+
+                form.reset();
+
+                if (typeof triggerPetalBurst === "function") {
+                    triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 70);
+                }
+                if (typeof playAuspiciousChime === "function") {
+                    playAuspiciousChime();
+                }
+            } catch (err) {
+                console.error("Submission failed:", err);
+                alert("Failed to save: " + err.message + "\n\nMake sure Rules in Firebase Console are published.");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        };
+    }
+</script>
 </body>
 </html>
