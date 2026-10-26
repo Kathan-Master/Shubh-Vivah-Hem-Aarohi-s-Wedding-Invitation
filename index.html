@@ -587,12 +587,6 @@
             <span>📺</span>
             <span id="tvModeLabel" class="hidden sm:inline">TV Mode</span>
         </button>
-
-        <!-- Customize Name, Date & Export for GitHub Button -->
-        <!-- <button id="openCustomizerBtn" onclick="toggleCustomizerModal(true)" class="flex items-center gap-2 px-4 py-2.5 rounded-full crimson-btn font-bold hover:scale-105 transition text-xs sm:text-sm cursor-pointer">
-            <span>✏️</span>
-            <span>Customize Names, Prayers & Date</span>
-        </button> -->
     </div>
 
     <!-- Top Quick Navigation Bar (Light Pearl Ivory & Gold) -->
@@ -883,10 +877,6 @@
                         <span>📅</span>
                         <span>Add to Google Calendar</span>
                     </button>
-                    <!-- <button onclick="toggleCustomizerModal(true)" class="px-5 py-2.5 rounded-full bg-ivory-50 border border-crimson-700/40 text-crimson-800 font-semibold hover:bg-blush-100 text-xs sm:text-sm transition flex items-center gap-2 cursor-pointer">
-                        <span>✏️</span>
-                        <span>Change Date or Name</span>
-                    </button> -->
                 </div>
             </div>
 
@@ -1710,124 +1700,7 @@
         }
 
         /* ===================================================================
-         * 6. LIVE CUSTOMIZER MODAL & ONE-CLICK GITHUB HTML EXPORT
-         * =================================================================== */
-        function toggleCustomizerModal(show) {
-            const modal = document.getElementById('customizerModal');
-            if (!modal) return;
-            if (show) {
-                document.getElementById('cfgThemeVariant').value = WEDDING_CONFIG.themeVariant || 'ivory-crimson';
-                document.getElementById('cfgTraditionOrder').value = WEDDING_CONFIG.traditionOrder || 'jain-swaminarayan';
-                document.getElementById('cfgJainHeader').value = WEDDING_CONFIG.jainHeader || '॥ श्री महावीर स्वामी नमः ॥';
-                document.getElementById('cfgSwamiHeader').value = WEDDING_CONFIG.swamiHeader || '॥ श्री स्वामिनारायणो विजयतेतराम ॥';
-                document.getElementById('cfgJainPrayer').value = WEDDING_CONFIG.jainFullMantra || '';
-                document.getElementById('cfgSwamiPrayer').value = WEDDING_CONFIG.swamiFullMantra || '';
-                document.getElementById('cfgGroomFirst').value = WEDDING_CONFIG.groomFirstName;
-                document.getElementById('cfgBrideFirst').value = WEDDING_CONFIG.brideFirstName;
-                document.getElementById('cfgGroomFull').value = WEDDING_CONFIG.groomFullName;
-                document.getElementById('cfgBrideFull').value = WEDDING_CONFIG.brideFullName;
-                document.getElementById('cfgWeddingISO').value = WEDDING_CONFIG.weddingDateISO;
-                document.getElementById('cfgMuhuratText').value = WEDDING_CONFIG.muhuratTimeText;
-                document.getElementById('cfgGroomLineage').value = WEDDING_CONFIG.groomLineage;
-                document.getElementById('cfgBrideLineage').value = WEDDING_CONFIG.brideLineage;
-                document.getElementById('cfgVenueName').value = WEDDING_CONFIG.venueName;
-                document.getElementById('cfgVenueAddress').value = WEDDING_CONFIG.venueAddress;
-                document.getElementById('cfgParentsInvite').value = WEDDING_CONFIG.parentsInviteLine;
-                document.getElementById('cfgHideCustomizerOnExport').checked = !!WEDDING_CONFIG.hideCustomizerButton;
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-            } else {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
-        }
-
-        function SyncFormToConfig() {
-            WEDDING_CONFIG.themeVariant = document.getElementById('cfgThemeVariant').value || "ivory-crimson";
-            WEDDING_CONFIG.traditionOrder = document.getElementById('cfgTraditionOrder').value || "jain-swaminarayan";
-            WEDDING_CONFIG.jainHeader = document.getElementById('cfgJainHeader').value.trim() || "॥ श्री महावीर स्वामी नमः ॥";
-            WEDDING_CONFIG.swamiHeader = document.getElementById('cfgSwamiHeader').value.trim() || "॥ श्री स्वामिनारायणो विजयतेतराम ॥";
-            WEDDING_CONFIG.jainFullMantra = document.getElementById('cfgJainPrayer').value.trim();
-            WEDDING_CONFIG.swamiFullMantra = document.getElementById('cfgSwamiPrayer').value.trim();
-            WEDDING_CONFIG.groomFirstName = document.getElementById('cfgGroomFirst').value.trim() || "Hem";
-            WEDDING_CONFIG.brideFirstName = document.getElementById('cfgBrideFirst').value.trim() || "Aarohi";
-            WEDDING_CONFIG.groomFullName = document.getElementById('cfgGroomFull').value.trim();
-            WEDDING_CONFIG.brideFullName = document.getElementById('cfgBrideFull').value.trim();
-            WEDDING_CONFIG.weddingDateISO = document.getElementById('cfgWeddingISO').value;
-            WEDDING_CONFIG.muhuratTimeText = document.getElementById('cfgMuhuratText').value.trim();
-            WEDDING_CONFIG.groomLineage = document.getElementById('cfgGroomLineage').value.trim();
-            WEDDING_CONFIG.brideLineage = document.getElementById('cfgBrideLineage').value.trim();
-            WEDDING_CONFIG.venueName = document.getElementById('cfgVenueName').value.trim();
-            WEDDING_CONFIG.venueShort = WEDDING_CONFIG.venueName;
-            WEDDING_CONFIG.venueAddress = document.getElementById('cfgVenueAddress').value.trim();
-            WEDDING_CONFIG.parentsInviteLine = document.getElementById('cfgParentsInvite').value.trim();
-            WEDDING_CONFIG.hideCustomizerButton = document.getElementById('cfgHideCustomizerOnExport').checked;
-        }
-
-        function applyCustomization(e) {
-            e.preventDefault();
-            SyncFormToConfig();
-            renderWeddingDetails();
-            updateWeddingCountdown();
-            toggleCustomizerModal(false);
-            celebrateDateAnimation();
-            document.getElementById('muhurat').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function downloadUpdatedHTMLForGitHub() {
-            SyncFormToConfig();
-            renderWeddingDetails();
-            updateWeddingCountdown();
-
-            let fullSource = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-            const replacementBlock = `/*__WEDDING_CONFIG_START__*/\n        let WEDDING_CONFIG = ${JSON.stringify(WEDDING_CONFIG, null, 12)};\n        /*__WEDDING_CONFIG_END__*/`;
-
-            fullSource = fullSource.replace(
-                /\/\*__WEDDING_CONFIG_START__\*\/[\s\S]*?\/\*__WEDDING_CONFIG_END__\*\//,
-                replacementBlock
-            );
-
-            const blob = new Blob([fullSource], { type: 'text/html;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'index.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 70);
-        }
-
-        /* ===================================================================
-         * 7. GOOGLE CALENDAR HELPER
-         * =================================================================== */
-        function openGoogleCalendar() {
-            const start = new Date(WEDDING_CONFIG.weddingDateISO);
-            const end = new Date(start.getTime() + 5 * 60 * 60 * 1000);
-            const fmt = (d) => d.toISOString().replace(/-|:|\.\d+/g, '');
-            const title = encodeURIComponent(`Shubh Vivah: ${WEDDING_CONFIG.groomFirstName} weds ${WEDDING_CONFIG.brideFirstName}`);
-            const details = encodeURIComponent(`${WEDDING_CONFIG.parentsInviteLine} ${WEDDING_CONFIG.groomFullName} & ${WEDDING_CONFIG.brideFullName}. ${WEDDING_CONFIG.muhuratTimeText}`);
-            const location = encodeURIComponent(`${WEDDING_CONFIG.venueName}, ${WEDDING_CONFIG.venueAddress}`);
-            window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${fmt(start)}/${fmt(end)}&details=${details}&location=${location}`, '_blank');
-        }
-
-        /* ===================================================================
-         * 8. LIVE AASHIRWAD & RSVP BLESSINGS WALL (LIGHT IVORY CARDS)
-         * =================================================================== */
-        const DEFAULT_BLESSINGS = [
-            
-        ];
-        
-        let blessingsData = [];
-        // ... (delete all the way down through the submitBlessingRSVP function) ...
-            document.getElementById('rsvpForm').reset();
-            triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 75);
-            playAuspiciousChime();
-        }
-
-        /* ===================================================================
-         * 9. TV DISPLAY MODE (FULLSCREEN + SMOOTH AUTO-SCROLL FOR SMART TVs)
+         * 6. TV DISPLAY MODE (FULLSCREEN + SMOOTH AUTO-SCROLL FOR SMART TVs)
          * =================================================================== */
         let isTVModeActive = false;
         let tvScrollDirection = 1;
@@ -1869,7 +1742,7 @@
         }
 
         /* ===================================================================
-         * 10. INTERSECTION OBSERVER & INITIALIZATION ON LOAD
+         * 7. INTERSECTION OBSERVER & INITIALIZATION ON LOAD
          * =================================================================== */
         function initScrollReveal() {
             const observer = new IntersectionObserver((entries) => {
@@ -1892,149 +1765,151 @@
         };
     </script>
 
-    <!-- Unified Firebase SDK & Live Real-Time Wall -->
-    <!-- Robust Real-Time Firebase Listener & Submitter -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { 
-        getFirestore, 
-        collection, 
-        addDoc, 
-        onSnapshot 
-    } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    <!-- ===================================================================== -->
+    <!-- 8. ROBUST REAL-TIME FIREBASE SDK & LISTENER                           -->
+    <!-- ===================================================================== -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { 
+            getFirestore, 
+            collection, 
+            addDoc, 
+            onSnapshot 
+        } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyBrzwrG6Chnamp5oXoQJVl_coIgTdjAPrY",
-        authDomain: "wedding-invitation-d5710.firebaseapp.com",
-        projectId: "wedding-invitation-d5710",
-        storageBucket: "wedding-invitation-d5710.firebasestorage.app",
-        messagingSenderId: "758522513337",
-        appId: "1:758522513337:web:a967f49cf4dad533b6d868"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const rsvpCol = collection(db, "wedding_blessings");
-
-    function escapeHtml(str) {
-        return (str || '').replace(/[&<>'"]/g, 
-            tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-        );
-    }
-
-    // 1. Live Real-time Listener (No orderBy filter trap; sorts newest-first in memory)
-    onSnapshot(rsvpCol, (snapshot) => {
-        const list = document.getElementById("blessingsWallList");
-        const counter = document.getElementById("blessingCounter");
-        if (!list) return;
-
-        if (counter) {
-            counter.innerText = `${snapshot.size} Blessing${snapshot.size === 1 ? '' : 's'}`;
-        }
-
-        if (snapshot.empty) {
-            list.innerHTML = `
-                <div class="col-span-full text-center py-10 text-crimson-900/60 italic text-sm">
-                    Be the first family member to shower the couple with your auspicious blessings!
-                </div>`;
-            return;
-        }
-
-        // Convert docs to array and sort by time (newest first)
-        const items = [];
-        snapshot.forEach((doc) => {
-            const data = doc.data();
-            items.push(data);
-        });
-
-        items.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
-
-        let itemsHtml = "";
-        items.forEach((data) => {
-            const dateStr = data.createdAt ? new Date(data.createdAt).toLocaleDateString('en-IN', {
-                day: 'numeric', month: 'short', year: 'numeric'
-            }) : 'Just now';
-
-            itemsHtml += `
-                <div class="p-4 rounded-2xl bg-ivory-50/90 border border-gold-500/40 shadow-sm flex flex-col justify-between hover:border-gold-500 transition">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-1.5">
-                            <h4 class="font-cinzel font-bold text-crimson-900 text-sm truncate flex items-center gap-1.5">
-                                <span>🪷</span> ${escapeHtml(data.name)}
-                            </h4>
-                            <span class="text-[11px] text-crimson-900/60 shrink-0 font-medium">${dateStr}</span>
-                        </div>
-                        <p class="font-cormorant italic text-crimson-950 text-base leading-snug mb-3">"${escapeHtml(data.message)}"</p>
-                    </div>
-                    <div class="flex items-center justify-between text-[11px] pt-2 border-t border-gold-400/20 text-gold-700 font-semibold">
-                        <span>${escapeHtml(data.attendance)}</span>
-                        <span>👥 ${escapeHtml(data.count)}</span>
-                    </div>
-                </div>
-            `;
-        });
-
-        list.innerHTML = itemsHtml;
-    }, (error) => {
-        console.error("Firestore Error:", error);
-        const list = document.getElementById("blessingsWallList");
-        if (list) {
-            list.innerHTML = `
-                <div class="col-span-full text-center py-8 text-crimson-700 text-xs font-semibold">
-                    Connection Error: ${error.message}. Please check your Firestore rules in Firebase Console.
-                </div>`;
-        }
-    });
-
-    // 2. Form Submission Handler
-    const form = document.getElementById("rsvpForm");
-    if (form) {
-        form.addEventListener("submit", async function(e) {
-            e.preventDefault();
-            console.log("Submit button clicked! Attempting to send to Firebase...");
-            const btn = document.getElementById("submitBlessingBtn");
-            const nameInput = document.getElementById("guestName");
-            const attendanceInput = document.getElementById("guestAttendance");
-            const countInput = document.getElementById("guestCount");
-            const messageInput = document.getElementById("guestMessage");
-
-            const name = nameInput.value.trim();
-            const attendance = attendanceInput.value;
-            const count = countInput.value;
-            const message = messageInput.value.trim();
-
-            if (!name || !message) return;
-
-            btn.disabled = true;
-            const originalText = btn.innerHTML;
-            btn.innerHTML = "🌸 Posting Auspicious Blessing...";
-
-            try {
-                await addDoc(rsvpCol, {
-                    name: name,
-                    attendance: attendance,
-                    count: count,
-                    message: message,
-                    createdAt: Date.now() // Standard millisecond timestamp for instant sorting
-                });
-
-                form.reset();
-
-                if (typeof triggerPetalBurst === "function") {
-                    triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 70);
-                }
-                if (typeof playAuspiciousChime === "function") {
-                    playAuspiciousChime();
-                }
-            } catch (err) {
-                console.error("Submission failed:", err);
-                alert("Failed to save: " + err.message + "\n\nMake sure Rules in Firebase Console are published.");
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = originalText;
-            }
+        const firebaseConfig = {
+            apiKey: "AIzaSyBrzwrG6Chnamp5oXoQJVl_coIgTdjAPrY",
+            authDomain: "wedding-invitation-d5710.firebaseapp.com",
+            projectId: "wedding-invitation-d5710",
+            storageBucket: "wedding-invitation-d5710.firebasestorage.app",
+            messagingSenderId: "758522513337",
+            appId: "1:758522513337:web:a967f49cf4dad533b6d868"
         };
-    }
-</script>
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const rsvpCol = collection(db, "wedding_blessings");
+
+        function escapeHtml(str) {
+            return (str || '').replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        // 1. Live Real-time Listener (No orderBy filter trap; sorts newest-first in memory)
+        onSnapshot(rsvpCol, (snapshot) => {
+            const list = document.getElementById("blessingsWallList");
+            const counter = document.getElementById("blessingCounter");
+            if (!list) return;
+
+            if (counter) {
+                counter.innerText = `${snapshot.size} Blessing${snapshot.size === 1 ? '' : 's'}`;
+            }
+
+            if (snapshot.empty) {
+                list.innerHTML = `
+                    <div class="col-span-full text-center py-10 text-crimson-900/60 italic text-sm">
+                        Be the first family member to shower the couple with your auspicious blessings!
+                    </div>`;
+                return;
+            }
+
+            // Convert docs to array and sort by time (newest first)
+            const items = [];
+            snapshot.forEach((doc) => {
+                const data = doc.data();
+                items.push(data);
+            });
+
+            items.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+
+            let itemsHtml = "";
+            items.forEach((data) => {
+                const dateStr = data.createdAt ? new Date(data.createdAt).toLocaleDateString('en-IN', {
+                    day: 'numeric', month: 'short', year: 'numeric'
+                }) : 'Just now';
+
+                itemsHtml += `
+                    <div class="p-4 rounded-2xl bg-ivory-50/90 border border-gold-500/40 shadow-sm flex flex-col justify-between hover:border-gold-500 transition">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <h4 class="font-cinzel font-bold text-crimson-900 text-sm truncate flex items-center gap-1.5">
+                                    <span>🪷</span> ${escapeHtml(data.name)}
+                                </h4>
+                                <span class="text-[11px] text-crimson-900/60 shrink-0 font-medium">${dateStr}</span>
+                            </div>
+                            <p class="font-cormorant italic text-crimson-950 text-base leading-snug mb-3">"${escapeHtml(data.message)}"</p>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] pt-2 border-t border-gold-400/20 text-gold-700 font-semibold">
+                            <span>${escapeHtml(data.attendance)}</span>
+                            <span>👥 ${escapeHtml(data.count)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            list.innerHTML = itemsHtml;
+        }, (error) => {
+            console.error("Firestore Error:", error);
+            const list = document.getElementById("blessingsWallList");
+            if (list) {
+                list.innerHTML = `
+                    <div class="col-span-full text-center py-8 text-crimson-700 text-xs font-semibold">
+                        Connection Error: ${error.message}. Please check your Firestore rules in Firebase Console.
+                    </div>`;
+            }
+        });
+
+        // 2. Form Submission Handler
+        const form = document.getElementById("rsvpForm");
+        if (form) {
+            form.addEventListener("submit", async function(e) {
+                e.preventDefault();
+                console.log("Submit button clicked! Attempting to send to Firebase...");
+                
+                const btn = document.getElementById("submitBlessingBtn");
+                const nameInput = document.getElementById("guestName");
+                const attendanceInput = document.getElementById("guestAttendance");
+                const countInput = document.getElementById("guestCount");
+                const messageInput = document.getElementById("guestMessage");
+
+                const name = nameInput.value.trim();
+                const attendance = attendanceInput.value;
+                const count = countInput.value;
+                const message = messageInput.value.trim();
+
+                if (!name || !message) return;
+
+                btn.disabled = true;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = "🌸 Posting Auspicious Blessing...";
+
+                try {
+                    await addDoc(rsvpCol, {
+                        name: name,
+                        attendance: attendance,
+                        count: count,
+                        message: message,
+                        createdAt: Date.now() // Standard millisecond timestamp for instant sorting
+                    });
+
+                    form.reset();
+
+                    if (typeof triggerPetalBurst === "function") {
+                        triggerPetalBurst(window.innerWidth / 2, window.innerHeight / 2, 70);
+                    }
+                    if (typeof playAuspiciousChime === "function") {
+                        playAuspiciousChime();
+                    }
+                } catch (err) {
+                    console.error("Submission failed:", err);
+                    alert("Failed to save: " + err.message + "\n\nMake sure Rules in Firebase Console are published.");
+                } finally {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
