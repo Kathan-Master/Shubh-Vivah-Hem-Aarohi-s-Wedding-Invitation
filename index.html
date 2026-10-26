@@ -1989,8 +1989,9 @@
     // 2. Form Submission Handler
     const form = document.getElementById("rsvpForm");
     if (form) {
-        form.onsubmit = async function(e) {
+        form.addEventListener("submit", async function(e) {
             e.preventDefault();
+            console.log("Submit button clicked! Attempting to send to Firebase...");
             const btn = document.getElementById("submitBlessingBtn");
             const nameInput = document.getElementById("guestName");
             const attendanceInput = document.getElementById("guestAttendance");
